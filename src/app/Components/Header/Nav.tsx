@@ -103,7 +103,7 @@
 //           </ul>
 //         </DropDown>
 //       </li> 
-      
+
 //       <li className="menu-item-has-children">
 //         <Link href="/blog" onClick={() => setMobileToggle(false)}>
 //           Blog
@@ -140,6 +140,7 @@
 //   );
 // }
 import Link from 'next/link';
+import DropDown from './DropDown';
 
 export default function Nav({ setMobileToggle }) {
   return (
@@ -150,11 +151,38 @@ export default function Nav({ setMobileToggle }) {
         </Link>
       </li>
 
-      <li>
+      <li className="menu-item-has-children"> 
         <Link href="#" onClick={() => setMobileToggle(false)}>
           Services
         </Link>
+
+        <DropDown>
+          <ul>
+            <li>
+              <Link href="/service/startups" onClick={() => setMobileToggle(false)}>
+                Startups
+              </Link>
+            </li>
+            <li>
+              <Link href="/service/legacy-modernization" onClick={() => setMobileToggle(false)}>
+               Legacy
+              </Link>
+            </li>
+            <li>
+              <Link href="/service/non-traditional" onClick={() => setMobileToggle(false)}>
+              Non-Traditional
+              </Link>
+            </li>
+                        <li>
+              <Link href="/service/dev-shops" onClick={() => setMobileToggle(false)}>
+             Dev Shops
+              </Link>
+            </li>
+          </ul>
+        </DropDown>
       </li>
+
+    
 
       <li>
         <Link href="#" onClick={() => setMobileToggle(false)}>

@@ -13,19 +13,21 @@ import Blog2 from '../Components/Blog/Blog2';
 import Process4 from '../Components/Process/Process4';
 import Blog1 from '../Components/Blog/Blog1';
 import Testimonial1 from '../Components/Testimonial/Testimonial1';
+import HomeServices from '../Components/Services/home-services';
 
 const page = () => {
     return (
         <div>
             <HeroBanner2></HeroBanner2>
             <Process4></Process4>
-            <About1></About1>
-            <Services2></Services2>
-            <Project2></Project2>
+            {/* <About1></About1> */}
+            {/* <Services2></Services2> */}
+            {/* <Project2></Project2> */}
+            <HomeServices/>
  
             <Process2></Process2>
             <Testimonial1></Testimonial1>
-            <Blog1></Blog1>        
+            {/* <Blog1></Blog1>         */}
         </div>
     );
 };

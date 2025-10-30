@@ -57,7 +57,7 @@ const Blog1 = () => {
 
                     {/* Blog 2 */}
                     <div className="col-xl-6">
-                        <div className="Agenko-blog-item style-two mb-40 pf_fadeup">
+                        <div className="Agenko-blog-item style-two mb-40 pf_fadeup text-md-start text-center">
                             <div className="post-thumbnail">
                                 <Image 
                                     src="/assets/images/pages/new-images/AI-second-blogs.jpeg" 

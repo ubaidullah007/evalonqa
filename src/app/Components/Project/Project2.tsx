@@ -31,11 +31,11 @@ const Project2 = () => {
   ];
 
   return (
-    <section className="agk-project pt-130 pb-80">
+    <section className="agk-project pt-130 ">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-7">
-            <div className="section-title mb-60 pf_fadeup">
+            <div className="section-title mb-60 pf_fadeup   text-md-start text-center">
               <span className="sub-title">AI Guide</span>
               <h2>
                 Explore Our Intelligent<br />AI-Powered Innovations
@@ -46,7 +46,7 @@ const Project2 = () => {
             </div>
           </div>
           <div className="col-lg-5">
-            <div className="agk-button mb-60 float-lg-end pf_fadeup">
+            <div className="agk-button  text-md-start text-center mb-60 float-lg-end pf_fadeup">
               <Link href="#" className="theme-btn style-one">
                 <span className="text-flip">
                   <span className="text">Explore More</span>
@@ -60,7 +60,7 @@ const Project2 = () => {
         <div className="row">
           {chooseContent.map((item, i) => (
             <div key={i} className="col-lg-6">
-              <div className="Agenko-project-item style-one mb-45 pf_fadeup">
+              <div className="Agenko-project-item  text-md-start text-center style-one mb-45 pf_fadeup">
                 <div className="thumbnail">
                   <img src={item.img} alt="AI Project" />
                   <div className="project-button">

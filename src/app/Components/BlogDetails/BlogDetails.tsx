@@ -3,7 +3,7 @@ import React from 'react';
 
 const BlogDetails = () => {
     return (
-            <section className="Agenko-blog-detils pt-130 pb-100">
+            <section className="Agenko-blog-detils pt-100 pb-100">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-8">

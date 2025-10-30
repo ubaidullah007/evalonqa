@@ -6,7 +6,7 @@ const HeroBanner2 = () => {
     return (
         <section className="agk-hero">
             <div className="hero-wrapper-two">
-                <div className="shape shape-one"><span><Image className="rotate360" src="/assets/images/digital-agency/hero/shape/shape1.png" alt="img" width={50} height={50} style={{filter:"sepia(1)"}} /></span></div>
+                <div className="shape shape-one d-none d-md-block"><span><Image className="" src="/assets/images/pages/new-images/quote.png" alt="img" width={50} height={50} style={{ filter: "sepia(1)" }} /></span></div>
                 <div className="shape shape-two"><span><Image className="animate-float-bob-y" src="/assets/images/digital-agency/hero/shape/shape2.png" alt="img" width={40} height={80} /></span></div>
                 <div className="shape circle-one"><span></span></div>
                 <div className="shape circle-two"><span></span></div>
@@ -15,15 +15,15 @@ const HeroBanner2 = () => {
                         <div className="col-lg-12">
                             <div className="hero-content">
                                 <h1>
-                                    <span className="text-anm">Where Human QA Meets </span>
-                                    <span className="text-anm">AI Speed</span>
+                                    <span className="text-anm text-md-start text-center ">Where Human QA Meets </span>
+                                    <span className="text-anm text-md-start text-center d-block d-md-inline-block">AI Speed</span>
                                 </h1>
                                 <div className="pro">Pro</div>
-                                <div className="text-box pf_fadeup">
-
-
-                                    <p> <span>Evalon QA</span> blends expert human testers with advanced AI-driven automation to deliver faster, smarter, and more reliable software testing — ensuring zero compromises in quality or precision.</p>
-                                    <div className="hero-button">
+                                <div className="text-box pf_fadeup text-md-start text-center">
+                                    <p>
+                                        <span>Evalon QA</span> blends expert human testers with advanced AI-driven automation to deliver faster, smarter, and more reliable software testing ensuring zero compromises in quality or precision.
+                                    </p>
+                                    <div className="hero-button d-flex justify-content-md-start justify-content-center">
                                         <Link href="#" className="theme-btn style-one">
                                             <span className="text-flip">
                                                 <span className="text">Read More</span>
@@ -32,6 +32,7 @@ const HeroBanner2 = () => {
                                         </Link>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

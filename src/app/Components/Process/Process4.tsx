@@ -2,17 +2,17 @@ import React from 'react';
 
 const Process2 = () => {
     return (
-        <section className="agk-work-process pt-130 pb-100">
+        <section className="agk-work-process pt-100 pb-100">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7">
-                        <div className="section-title mb-50 pf_fadeup">
-                            <span className="sub-title">AI Testing Evolution</span>
-                            <h2>Turning AI Hype Into Real QA Impact</h2>
+                        <div className="section-title mb-50 pf_fadeup text-md-start text-center">
+                            <span className="sub-title " >AI Testing Evolution</span>
+                            <h2 className='text-md-start  text-center'>Turning AI Hype Into Real QA Impact</h2>
                         </div>
                     </div>
                     <div className="col-lg-5">
-                        <div className="text-box mb-55 pf_fadeup">
+                        <div className="text-md-start text-center text-box mb-55 pf_fadeup">
                             <p>
                                 Evalon QA blends human expertise with AI precision to redefine quality assurance. 
                                 Our embedded QA engineers use intelligent automation to enhance testing speed, 
@@ -29,7 +29,7 @@ const Process2 = () => {
                                 <i className="bi bi-database-gear"></i>
                             </div>
                             <div className="content">
-                                <h4 className="title">AI-Driven Test Data</h4>
+                                <h4 className="title text-md-start text-center">AI-Driven Test Data</h4>
                                 <p>
                                     Automatically build realistic test data from your schemas. 
                                     Our AI identifies patterns, fills gaps, and generates diverse datasets 
@@ -46,7 +46,7 @@ const Process2 = () => {
                                 <i className="bi bi-code-slash"></i>
                             </div>
                             <div className="content">
-                                <h4 className="title">AI-Powered Playwright</h4>
+                                <h4 className="title text-md-start text-center">AI-Powered Playwright</h4>
                                 <p>
                                     Write and optimize Playwright tests in a fraction of the time. 
                                     Our AI interprets your HTML structure to create robust test scripts 
@@ -63,7 +63,7 @@ const Process2 = () => {
                                 <i className="bi bi-cursor-text"></i>
                             </div>
                             <div className="content">
-                                <h4 className="title">Smarter Cursor Workflows</h4>
+                                <h4 className="title text-md-start text-center">Smarter Cursor Workflows</h4>
                                 <p>
                                     Experience seamless test writing with AI-assisted Cursor workflows. 
                                     From generating TestIDs to refining test logic, our engineers 
@@ -80,7 +80,7 @@ const Process2 = () => {
                                 <i className="bi bi-bug"></i>
                             </div>
                             <div className="content">
-                                <h4 className="title">Intelligent Bug Reports</h4>
+                                <h4 className="title text-md-start text-center">Intelligent Bug Reports</h4>
                                 <p>
                                     Convert informal bug notes into complete, structured reports. 
                                     With ChatGPT-powered documentation, every ticket becomes clear, 
