@@ -1,4 +1,4 @@
-//import React from "react";
+import React from "react";
 import { ServiceData } from "../../../Data/servicesdata";
 import StartBalancingAct from "../../../Components/ServicePage/StartBalancingAct";
 import Benifits from "../../../Components/ServicePage/benifits";
