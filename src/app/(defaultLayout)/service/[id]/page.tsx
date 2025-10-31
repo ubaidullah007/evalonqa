@@ -7,30 +7,46 @@ import ServicePoint from "../../../Components/ServicePage/ServicePoint";
 import StepProcess from "../../../Components/ServicePage/stepprocess";
 import CTA from "../../../Components/ServicePage/cta";
 
-
+// ✅ Correct type for Next.js App Router (params as Promise)
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-const ServicePage = ({ params }: ServicePageProps) => {
-  // params.id = "startup" etc.
-  const service = ServiceData.find((obj) => obj.servicetitle === params.id);
-  
+const ServicePage = async ({ params }: ServicePageProps) => {
+  // ✅ Resolve params (Next internally provides Promise)
+  const resolvedParams = await params;
+
+  const service = ServiceData.find(
+    (obj) => obj.servicetitle?.toLowerCase() === resolvedParams.id?.toLowerCase()
+  );
 
   if (!service) {
-    return <div className="text-center py-20 text-xl">Service not found</div>;
+    return (
+      <div className="text-center py-20 text-xl font-semibold">
+        Service not found
+      </div>
+    );
   }
+
+  const {
+    infoSection = {},
+    DetailSec = {},
+    benifits = [],
+    ServiceList = [],
+    Strategy = [],
+    cta = {},
+  } = service;
 
   return (
     <>
-      <Banner data={service.infoSection} />
-      <StartBalancingAct data={service.DetailSec} />
-      <Benifits data={service.benifits} />
-      <ServicePoint data={service.ServiceList} />
-      <StepProcess data={service?.Strategy}/>
-      <CTA data={service.cta}/>
+      <Banner data={infoSection} />
+      <StartBalancingAct data={DetailSec} />
+      <Benifits data={benifits} />
+      <ServicePoint data={ServiceList} />
+      <StepProcess data={Strategy} />
+      <CTA data={cta} />
     </>
   );
 };
