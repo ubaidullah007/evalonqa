@@ -6,7 +6,7 @@ export default function Nav({ setMobileToggle }) {
   return (
     <ul className="cs_nav_list fw-medium">
       <li>
-        <Link href="#" onClick={() => setMobileToggle(false)}>
+        <Link href="/" onClick={() => setMobileToggle(false)}>
           Home
         </Link>
       </li>

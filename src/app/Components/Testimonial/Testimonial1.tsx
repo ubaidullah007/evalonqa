@@ -89,7 +89,7 @@ const Testimonial1 = () => {
                         </div>
                         <div className="col-lg-8">
                             <div className="agk-content-box mb-50 pf_fadeup">
-                                <div className="fill-text">TESTIMONIAL</div>
+                                <div className="fill-text">TESTIMONIALS</div>
                                 <div className="testimonial-slider">
                                 <Slider {...settings}>
                                 {testimonialContent.map((item, i) => (
