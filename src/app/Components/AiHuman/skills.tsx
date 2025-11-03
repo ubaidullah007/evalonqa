@@ -1,34 +1,35 @@
+"use client";
 import React from 'react';
 
 const Skills = (data: any) => {
 
     const updatedData = {
-        title: "Beyond Technical Skills: The LoopQA Difference",
-        desc: "We hire and train for the traits that make engineers exceptional partners and effective AI users.",
+        title: "Beyond Code: The Evalon QA Mindset",
+        desc: "At Evalon QA, we develop engineers who think critically, communicate clearly, and use AI as a true force multiplier—not just a shortcut.",
         Skillslist: [
             {
                 id: 1,
-                icon: "bi bi-lightbulb", // example icon, replace if needed
-                title: "Critical & Analytical Thinking",
-                desc: "Ability to deeply understand systems, question assumptions, and devise insightful testing strategies, not just follow scripts."
+                icon: "bi bi-lightbulb",
+                title: "Analytical Depth",
+                desc: "Engineers who dissect systems deeply, uncover hidden dependencies, and design test strategies grounded in logic and insight."
             },
             {
                 id: 2,
                 icon: "bi bi-rocket",
-                title: "Ambition & Adaptability",
-                desc: "Driven to continuously learn, embrace new tools (like Cursor, LLMs), and proactively push for better processes."
+                title: "Growth and Agility",
+                desc: "Driven professionals who adapt fast, explore new AI tools like Cursor and LLMs, and continuously refine testing efficiency."
             },
             {
                 id: 3,
                 icon: "bi bi-heart",
-                title: "Emotional Intelligence",
-                desc: "Strong communication, empathy, and collaboration skills to integrate seamlessly with your team."
+                title: "Collaborative Intelligence",
+                desc: "Strong emotional awareness and communication that enable effortless teamwork, even across distributed environments."
             },
             {
                 id: 4,
                 icon: "bi bi-person-badge",
-                title: "Mid/Senior Expertise",
-                desc: "Focus on experienced engineers (mid/senior level) who bring mature judgment and problem-solving skills."
+                title: "Experienced Precision",
+                desc: "A team built around seasoned mid and senior engineers who bring technical depth, judgment, and reliability to every QA engagement."
             },
         ]
     };
@@ -39,7 +40,7 @@ const Skills = (data: any) => {
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="section-title mb-50 pf_fadeup">
-                            <span className="sub-title">Quality Assurance Excellence</span>
+                            <span className="sub-title">Quality at Human Scale</span>
                             <h2>{updatedData.title}</h2>
                         </div>
                     </div>
@@ -53,7 +54,7 @@ const Skills = (data: any) => {
                 <div className="row">
                     {updatedData.Skillslist.map((item) => (
                         <div key={item.id} className="col-xl-3 col-md-6 col-sm-12 mb-40 pf_fadeup">
-                            <div className="Agenko-iconic-box style-two h-100 ">
+                            <div className="Agenko-iconic-box style-two h-100">
                                 <div className="icon iconic-box-center">
                                     <i className={item.icon}></i>
                                 </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Banner = (data: any) => {
+const Banner = ({title , desc}) => {
     return (
         <div>
             <section className="mt-80 pb-80 bg-black">
@@ -13,26 +13,21 @@ const Banner = (data: any) => {
                         <div className="col-lg-9">
                             <div className="page-content text-md-start text-center">
                                 <h1 className="mb-30 services_title">
-                                    AI is Powerful, but People Make it Exceptional
+                                    {title}
                                 </h1>
                                 <div className="row">
                                     <div className="col-xl-12">
                                         <div className="d-flex align-items-center">
                                             <div className="text" style={{ fontSize: "22px" }}>
                                                 <p>
-                                                    Artificial intelligence is revolutionizing quality assurance, but its true impact depends on the expertise, creativity, and problem-solving of the engineers using it. At Evalon QA, we prioritize cultivating exceptional human talent—because AI works best when guided by intelligent people.
+                                                    {desc}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="hero-button mt-40 d-flex justify-content-md-start justify-content-center">
-                                    <Link href="#" className="theme-btn style-one">
-                                        <span className="text-flip">
-                                            <span className="text">Get Your Startup QA Blueprint</span>
-                                            <span className="text">Get Your Startup QA Blueprint</span>
-                                        </span>
-                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>

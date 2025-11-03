@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import DropDown from './DropDown';
+import DropDown from './DropDown';
 
 export default function Nav({ setMobileToggle }) {
   return (
@@ -79,13 +80,13 @@ export default function Nav({ setMobileToggle }) {
       </li>
 
       <li>
-        <Link href="#" onClick={() => setMobileToggle(false)}>
+        <Link href="/humans" onClick={() => setMobileToggle(false)}>
           Humans
         </Link>
       </li>
 
       <li>
-        <Link href="#" onClick={() => setMobileToggle(false)}>
+        <Link href="/blog" onClick={() => setMobileToggle(false)}>
           Blog
         </Link>
       </li>

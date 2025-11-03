@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import AIImage from '../../../../public/assets/images/pages/new-images/about.jpeg';
 
 const Advantage = (data) => {
     const [iframeSrc, setIframeSrc] = useState('about:blank');
@@ -16,14 +17,14 @@ const Advantage = (data) => {
         setToggle(!toggle);
     };
 
-    // ✅ Updated & Rephrased Data
+    // ✅ Rephrased & Optimized Content
     const updatedData = {
-        title: "Accountable, Aligned, Available: The US-Based Advantage",
-        description: "Our entire engineering team is based in the United States, providing distinct advantages for collaboration and security.",
+        title: "Dependable, Connected, Local. The Evalon QA Edge",
+        description: "Our engineering operations are entirely US-based, ensuring seamless coordination, strong communication, and enhanced project security for every client engagement.",
         highlights: [
-            "Seamless Communication: Fluent English and cultural alignment minimize misunderstandings.",
-            "Real-Time Collaboration: Work within your timezone for faster feedback loops and agile integration.",
-            "Enhanced Security & IP Protection: Benefit from the accountability and legal framework of an onshore team."
+            "Clear Communication: Work effortlessly with fluent, culturally aligned engineers who understand your business context.",
+            "Synchronized Collaboration: Stay in sync with a team operating in your timezone for faster iteration and immediate feedback.",
+            "Security and IP Confidence: Rely on the robust legal and privacy protections that come with a fully onshore engineering team."
         ],
         secImg: data?.data?.secImg || "/placeholder.jpg" // fallback image
     };
@@ -41,7 +42,7 @@ const Advantage = (data) => {
 
                             <p className="mb-40">{updatedData.description}</p>
 
-                            {/* ✅ Dynamic Mapping for Highlights */}
+                            {/* ✅ Dynamic Highlights */}
                             <ul className="check-list style-one mb-40">
                                 {updatedData.highlights.map((point, index) => (
                                     <li key={index}>
@@ -58,9 +59,9 @@ const Advantage = (data) => {
                         <div className="agk-play-image-box mb-50 pf_fadeup">
                             <div className="agk-image style-four">
                                 <Image
-                                    src={updatedData.secImg}
+                                    src={AIImage}
                                     className="rounded-2 object-fit-cover"
-                                    alt="US-Based Team Advantage"
+                                    alt="Evalon QA US-Based Team Advantage"
                                     width={743}
                                     height={380}
                                 />
