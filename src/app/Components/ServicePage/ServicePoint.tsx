@@ -33,7 +33,7 @@ const ServicePoint = (data) => {
                             {/* ✅ Dynamic Mapping for Highlights */}
                             <ul className="check-list style-one mb-40">
                                 {data?.data?.highlights.map((point, index) => (
-                                    <li key={index}>
+                                    <li className='text-start' key={index}>
                                         <i className="bi bi-check2-circle"></i>
                                         {point}
                                     </li>

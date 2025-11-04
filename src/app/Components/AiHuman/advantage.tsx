@@ -45,7 +45,7 @@ const Advantage = (data) => {
                             {/* ✅ Dynamic Highlights */}
                             <ul className="check-list style-one mb-40">
                                 {updatedData.highlights.map((point, index) => (
-                                    <li key={index}>
+                                    <li className='text-start' key={index}>
                                         <i className="bi bi-check2-circle"></i>
                                         {point}
                                     </li>

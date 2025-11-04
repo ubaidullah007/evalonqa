@@ -4649,7 +4649,7 @@ label {
   letter-spacing: 0.48px;
 }
 .footer-widget.footer-nav-widget {
-  padding-left: 40px;
+  padding-left: 0px;
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .footer-widget.footer-nav-widget {
