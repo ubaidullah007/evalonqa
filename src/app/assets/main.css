@@ -7697,3 +7697,18 @@ margin-top: 20px;
   border-radius: 8px;
   display: inline-block;
 }
+
+.testimonial-card {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.play-btn:hover {
+  background-color: #0d6efd;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}

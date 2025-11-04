@@ -1,7 +1,52 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useState } from "react";
 
 const Contact = () => {
+
+  const [status, setStatus] = useState("");
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      primary_interest: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Name is required"),
+      email: Yup.string().email("Invalid email").required("Email is required"),
+      subject: Yup.string().required("Subject is required"),
+      message: Yup.string().required("Message is required"),
+      primary_interest: Yup.string().required("Please select an interest"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      setStatus("Sending...");
+      try {
+        const res = await fetch("/api/sendMail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        });
+
+        if (res.ok) {
+          setStatus("Message sent successfully!");
+          resetForm();
+        } else {
+          setStatus("Failed to send message. Try again later.");
+        }
+      } catch (error) {
+        setStatus("An error occurred. Please try again.");
+      }
+    },
+  });
+
+
+
   return (
     <div>
       <section className="Agenko-contact pt-130 pb-80">
@@ -95,127 +140,122 @@ const Contact = () => {
             <div className="col-lg-7">
               <div className="Agenko-content-box mb-50 pf_fadeup">
                 <div className="section-title mb-20">
-                  <span className="sub-title">Get In Touch</span>
                   <h2>Schedule Your Consultation</h2>
                 </div>
                 <p className="mb-20">
-                  Please complete the form below with your details to move
-                  forward and choose a suitable time slot.
+                  Please complete the form below with your details to move forward and
+                  choose a suitable time slot.
                 </p>
-                <form
-                  className="Agenko-contact-form style-one"
-                  id="contact-form"
-                  action="contact.php"
-                  method="POST"
-                >
+
+                <form onSubmit={formik.handleSubmit} className="Agenko-contact-form style-one">
                   <div className="row">
+                    {/* Name */}
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
                           type="text"
-                          className="form_control"
-                          placeholder="Name"
                           name="name"
-                          required
+                          placeholder="Name"
+                          className="form_control"
+                          {...formik.getFieldProps("name")}
                         />
+                        {formik.touched.name && formik.errors.name && (
+                          <small className="text-danger">{formik.errors.name}</small>
+                        )}
                       </div>
                     </div>
+
+                    {/* Email */}
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
                           type="email"
-                          className="form_control"
-                          placeholder="Email"
                           name="email"
-                          required
+                          placeholder="Email"
+                          className="form_control"
+                          {...formik.getFieldProps("email")}
                         />
+                        {formik.touched.email && formik.errors.email && (
+                          <small className="text-danger">{formik.errors.email}</small>
+                        )}
                       </div>
                     </div>
+
+                    {/* Subject */}
                     <div className="col-md-12">
                       <div className="form-group">
                         <input
                           type="text"
-                          className="form_control"
-                          placeholder="Subject"
                           name="subject"
-                          required
+                          placeholder="Subject"
+                          className="form_control"
+                          {...formik.getFieldProps("subject")}
                         />
+                        {formik.touched.subject && formik.errors.subject && (
+                          <small className="text-danger">{formik.errors.subject}</small>
+                        )}
                       </div>
                     </div>
 
-
+                    {/* Message */}
                     <div className="col-lg-12">
                       <textarea
-                        className="form_control"
                         rows={3}
-                        placeholder="Message"
                         name="message"
+                        placeholder="Message"
+                        className="form_control"
+                        {...formik.getFieldProps("message")}
                       ></textarea>
+                      {formik.touched.message && formik.errors.message && (
+                        <small className="text-danger">{formik.errors.message}</small>
+                      )}
                     </div>
 
+                    {/* Radio Buttons */}
                     <div className="col-md-6 mb-3">
                       <div className="form-group">
-                        <label className="d-block mb-2" style={{fontSize:"18px" , color:"white"}}>
+                        <label className="d-block mb-2" style={{ fontSize: "18px", color: "white" }}>
                           <strong>Primary Interest</strong>
                         </label>
-                        <div className="form-check">
-                          <input
-                            type="radio"
-                            className="form-check-input"
-                            id="interest1"
-                            name="primary_interest"
-                            value="Embedded Automation QA"
-                            required
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="interest1"
-                          >
-                            Embedded Automation QA
-                          </label>
-                        </div>
-                        <div className="form-check">
-                          <input
-                            type="radio"
-                            className="form-check-input"
-                            id="interest2"
-                            name="primary_interest"
-                            value="Embedded Manual QA"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="interest2"
-                          >
-                            Embedded Manual QA
-                          </label>
-                        </div>
-                        <div className="form-check">
-                          <input
-                            type="radio"
-                            className="form-check-input"
-                            id="interest3"
-                            name="primary_interest"
-                            value="Unsure / Other"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="interest3"
-                          >
-                            Unsure / Other
-                          </label>
-                        </div>
+
+                        {["Embedded Automation QA", "Embedded Manual QA", "Unsure / Other"].map((interest, i) => (
+                          <div className="form-check" key={i}>
+                            <input
+                              type="radio"
+                              id={`interest${i}`}
+                              name="primary_interest"
+                              value={interest}
+                              className="form-check-input"
+                              checked={formik.values.primary_interest === interest}
+                              onChange={formik.handleChange}
+                            />
+                            <label className="form-check-label" htmlFor={`interest${i}`}>
+                              {interest}
+                            </label>
+                          </div>
+                        ))}
+
+                        {formik.touched.primary_interest && formik.errors.primary_interest && (
+                          <small className="text-danger">{formik.errors.primary_interest}</small>
+                        )}
                       </div>
                     </div>
+
+                    {/* Submit */}
                     <div className="col-lg-12">
                       <div className="form-group">
-                        <button className="theme-btn">
-                          Schedule a Call Now
+                        <button type="submit" className="theme-btn" disabled={status === "Sending..."}>
+                          {status === "Sending..." ? "Sending..." : "Schedule a Call Now"}
                         </button>
                       </div>
                     </div>
-                    <div className="col-lg-12">
-                      <div className="form-message"></div>
-                    </div>
+
+                    {/* Status Message */}
+                    {status && (
+                      <div className="col-lg-12">
+                        <div className="form-message text-white">{status}</div>
+                      </div>
+                    )}
                   </div>
                 </form>
               </div>
