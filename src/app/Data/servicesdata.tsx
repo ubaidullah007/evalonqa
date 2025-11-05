@@ -5,7 +5,7 @@ import DevShops from "../../../public/assets/images/pages/new-images/devshops.jp
 
 export const ServiceData = [
     {
-        servicetitle: "startups",
+        servicetitle: "custom-startups",
         infoSection: {
             title: "Accelerate Your Launch with Smarter QA for Startups",
             desc: "Innovate freely while we make sure your product performs flawlessly. Our AI-powered, US-based QA helps you move faster and scale confidently without compromising reliability."
@@ -118,7 +118,7 @@ export const ServiceData = [
     },
 
     {
-    servicetitle: "legacy-modernization",
+    servicetitle: "custom-legacy-modernization",
     infoSection: {
         title: "Modernize Your QA with AI-Powered Agility",
         desc: "Transform outdated QA systems into agile, automated, and intelligent processes. Our AI-driven solutions enhance speed, reliability, and confidence across your legacy software ecosystem."
@@ -232,7 +232,7 @@ export const ServiceData = [
 
 
 {
-    servicetitle: "non-traditional",
+    servicetitle: "custom-non-traditional",
     infoSection: {
         title: "Empower Your Internal Software with Professional QA",
         desc: "You’re the expert in your business — let us be the experts in your software quality. Our AI-driven QA ensures your internal systems perform reliably without disrupting operations."
@@ -346,7 +346,7 @@ export const ServiceData = [
 },
 
 {
-    servicetitle: "dev-shops",
+    servicetitle: "c-dev-shops",
     infoSection: {
         title: "Transform Quality Into Client Satisfaction and Growth",
         desc: "Empower your development team with AI-driven QA that ensures flawless software delivery, strengthens client trust, and fuels business expansion."

@@ -1,6 +1,6 @@
 export const AIDATA = [
 {
-link:'ai-powered-playwright',
+link:'ssasasaai-powered-playwright',
     BannerSection:{
 title : "Revolutionize Playwright Testing with Evalon QA" , 
 description:"Stop relying on slow manual testing cycles. With Evalon QA’s AI-driven automation and deep DOM intelligence, you can instantly generate, validate, and refine Playwright test cases that adapt as your application evolves. Experience the next level of testing, faster, smarter, and built for modern development" , 
@@ -172,7 +172,7 @@ export class UserProfilePage {
 
 
 {
-link:'smart-test-data',
+link:'ssssmart-test-data',
     BannerSection:{
 title : "Smarter, Context-Aware Test Data Generation" , 
 description:"Say goodbye to fragile tests caused by artificial or incomplete data. Evalon QA uses intelligent automation, schema-driven design, and tools like Faker.js to craft realistic, adaptive datasets. This ensures your test environments mirror real-world conditions for dependable, high-quality validation every time." , 
@@ -288,7 +288,7 @@ AIArticleContent: {
 
 
 {
-link:'optimized-cursor-usage',
+link:'ooooptimized-cursor-usage',
     BannerSection:{
   title: "Mastering Cursor with Evalon QA",
   description: "Cursor is a powerful tool for accelerating test creation and coding, but many teams underutilize its full potential. This guide from Evalon QA dives into advanced techniques, best practices, and pro tips to help you streamline workflows, reduce repetitive tasks, and harness AI-driven assistance for smarter, faster, and more reliable development. Learn how to transform Cursor into a productivity powerhouse and elevate your Playwright testing efficiency."
@@ -412,7 +412,7 @@ AIArticleContent: {
 
 
 {
-link:'bug-documentation',
+link:'bug-documentations',
     BannerSection:{
 title: "Generate Perfect Bug Tickets in Seconds with AI",
 description: "Stop struggling with unclear or inconsistent bug reports. This guide from Evalon QA shows you how to leverage AI, including ChatGPT, along with screenshots and voice narration, to instantly generate well-structured, actionable, and standardized bug tickets. Learn how to streamline your reporting workflow, reduce manual effort, and ensure your team receives precise, reproducible, and professional bug documentation every time."
@@ -572,7 +572,7 @@ Generate the bug report now.”</pre>
 
 
 {
-link:'productivity',
+link:'productivitys',
     BannerSection:{
 title: "Supercharge Your QA: 3x Impact with AI Augmentation",
 description: "Manual testing can be slow and repetitive, but AI-powered tools like Cursor are transforming QA workflows. This guide explores targeted strategies and proven techniques to help QA engineers multiply their efficiency threefold, accelerating automation, reducing repetitive tasks, and delivering higher-quality results faster than traditional manual testing. Learn how to integrate AI into your QA processes to maximize impact and streamline your testing pipelines."
