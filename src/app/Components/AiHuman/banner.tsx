@@ -27,7 +27,7 @@ const Banner = (data: any) => {
                                     </div>
                                 </div>
                                 <div className="hero-button mt-40 d-flex justify-content-md-start justify-content-center">
-                                    <Link href="#" className="theme-btn style-one">
+                                    <Link href="/contact" className="theme-btn style-one">
                                         <span className="text-flip">
                                             <span className="text">Get Your Startup QA Blueprint</span>
                                             <span className="text">Get Your Startup QA Blueprint</span>

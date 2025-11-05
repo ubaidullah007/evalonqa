@@ -10,7 +10,6 @@ import DevShops from "../../../../../public/assets/images/pages/new-images/devsh
 
 
 const data =  {
-    servicetitle: "c-dev-shops",
     infoSection: {
         title: "Transform Quality Into Client Satisfaction and Growth",
         desc: "Empower your development team with AI-driven QA that ensures flawless software delivery, strengthens client trust, and fuels business expansion."
