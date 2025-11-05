@@ -7346,7 +7346,8 @@ color: black !important;
   right: -100%;
   width: 90%;
   height: 100%;
-  background: #000000;
+  background: linear-gradient(135deg, #000000 40%, #6cffff);
+
   box-shadow: -3px 0 15px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease;
   z-index: 999;
@@ -7711,4 +7712,65 @@ margin-top: 20px;
   background-color: #0d6efd;
   transform: scale(1.1);
   transition: all 0.3s ease;
+}
+
+.mi-mission-values-section {
+  background: #000;
+  color: #e2e8f0;
+}
+
+.mi-content-box {
+  background: #0e0f11;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(108, 255, 255, 0.15);
+}
+
+.mi-content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(108, 255, 255, 0.25);
+}
+
+.mi-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+}
+
+.mi-section-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: #6cffff;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.mi-mission-list li,
+.mi-values-list li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  color: #cbd5e1;
+}
+
+.mi-mission-list i,
+.mi-values-list i {
+  font-size: 1.2rem;
+  color: #6cffff;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.mi-content-box p {
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.mi-content-box strong {
+  color: #ffffff;
 }
