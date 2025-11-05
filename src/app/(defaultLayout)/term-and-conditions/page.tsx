@@ -12,7 +12,7 @@ const Page = () => {
             <div className="col-lg-8">
               <div className="terms-content">
                 <p>
-                  Welcome to <strong>EvalonQA</strong>. By accessing or using
+                  Welcome to <strong>Evalon QA</strong>. By accessing or using
                   our website and services, you agree to comply with and be
                   bound by the following terms and conditions:
                 </p>
@@ -26,7 +26,7 @@ const Page = () => {
                 <h4 className="mt-4">2. Intellectual Property</h4>
                 <p>
                   All content, frameworks, code, and materials on this website
-                  are the exclusive property of EvalonQA. Unauthorized
+                  are the exclusive property of Evalon QA. Unauthorized
                   reproduction, modification, or redistribution is strictly
                   prohibited.
                 </p>
@@ -40,7 +40,7 @@ const Page = () => {
 
                 <h4 className="mt-4">4. Limitation of Liability</h4>
                 <p>
-                  EvalonQA shall not be liable for any indirect, incidental, or
+                  Evalon QA shall not be liable for any indirect, incidental, or
                   consequential damages arising from the use or inability to use
                   our services, including but not limited to data loss or
                   business interruption.

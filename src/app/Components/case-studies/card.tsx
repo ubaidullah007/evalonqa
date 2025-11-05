@@ -93,7 +93,7 @@ const testimonials = [
                       </h6>
                     </div>
                     <p className="fst-italic text-light opacity-75 mb-3">
-                      "{data.quote}"
+                      {data.quote}
                     </p>
                   </div>
 

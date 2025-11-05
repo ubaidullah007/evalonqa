@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
      <Banner
-  title="Discover How EvalonQA Empowers Global Brands"
+  title="Discover How Evalon QA Empowers Global Brands"
   desc="See how our intelligent QA automation and expert testing teams help companies achieve flawless product quality, faster releases, and unmatched user satisfaction."
 />
 

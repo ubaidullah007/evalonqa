@@ -12,7 +12,7 @@ const Page = () => {
       <div className="col-lg-8">
         <div className="terms-content">
           <p>
-            At <strong>EvalonQA</strong>, we respect your privacy and are committed to protecting your personal data.
+            At <strong>Evalon QA</strong>, we respect your privacy and are committed to protecting your personal data.
           </p>
 
           <h4 className="mt-4">1. Information Collection</h4>
@@ -36,7 +36,7 @@ const Page = () => {
 
           <h4 className="mt-4">4. Third-Party Sharing</h4>
           <p>
-            EvalonQA does not sell or rent personal data to any third parties. Information may only be shared with trusted service partners under strict confidentiality agreements.
+            Evalon QA does not sell or rent personal data to any third parties. Information may only be shared with trusted service partners under strict confidentiality agreements.
           </p>
 
           <h4 className="mt-4">5. Your Rights</h4>
@@ -47,7 +47,7 @@ const Page = () => {
 
           <h4 className="mt-4">6. Policy Updates</h4>
           <p>
-            EvalonQA may update this Privacy Policy periodically. Any changes will be reflected on this page with the revised date.
+            Evalon QA may update this Privacy Policy periodically. Any changes will be reflected on this page with the revised date.
           </p>
         </div>
       </div>
