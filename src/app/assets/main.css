@@ -7774,3 +7774,8 @@ margin-top: 20px;
 .mi-content-box strong {
   color: #ffffff;
 }
+.contact-error{
+
+    margin-top: -24px;
+    display: block;
+}

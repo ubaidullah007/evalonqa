@@ -160,7 +160,7 @@ const Contact = () => {
                           {...formik.getFieldProps("name")}
                         />
                         {formik.touched.name && formik.errors.name && (
-                          <small className="text-danger">{formik.errors.name}</small>
+                          <small className="text-danger contact-error">{formik.errors.name}</small>
                         )}
                       </div>
                     </div>
@@ -176,7 +176,7 @@ const Contact = () => {
                           {...formik.getFieldProps("email")}
                         />
                         {formik.touched.email && formik.errors.email && (
-                          <small className="text-danger">{formik.errors.email}</small>
+                          <small className="text-danger contact-error">{formik.errors.email}</small>
                         )}
                       </div>
                     </div>
@@ -192,7 +192,7 @@ const Contact = () => {
                           {...formik.getFieldProps("subject")}
                         />
                         {formik.touched.subject && formik.errors.subject && (
-                          <small className="text-danger">{formik.errors.subject}</small>
+                          <small className="text-danger contact-error">{formik.errors.subject}</small>
                         )}
                       </div>
                     </div>
@@ -207,7 +207,7 @@ const Contact = () => {
                         {...formik.getFieldProps("message")}
                       ></textarea>
                       {formik.touched.message && formik.errors.message && (
-                        <small className="text-danger">{formik.errors.message}</small>
+                        <small className="text-danger contact-error">{formik.errors.message}</small>
                       )}
                     </div>
 
@@ -236,7 +236,7 @@ const Contact = () => {
                         ))}
 
                         {formik.touched.primary_interest && formik.errors.primary_interest && (
-                          <small className="text-danger">{formik.errors.primary_interest}</small>
+                          <small className="text-danger contact-error">{formik.errors.primary_interest}</small>
                         )}
                       </div>
                     </div>

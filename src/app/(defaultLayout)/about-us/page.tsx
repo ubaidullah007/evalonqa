@@ -29,7 +29,7 @@ const page = async () => {
                         Let’s transform how your teams deliver quality.
                     </p>
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="btn mt-4 btn-cta inline-block bg-[#6cffff] text-black font-medium py-3 px-6 rounded-full hover:bg-white transition-all duration-300"
                     >
                         Contact Us
