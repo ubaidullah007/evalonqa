@@ -4,7 +4,7 @@ import React from 'react';
 // import AboutImg  from '../../../../public/assets/images/pages/new';
 const About1 = () => {
     return (
-        <section className="agk-about pt-80 ">
+        <section className="agk-about pt-40 pt-md-80 mt-md-5 m-0 ">
             <div className="container">
                 <div className="row">
                     <div className="col-xl-7">

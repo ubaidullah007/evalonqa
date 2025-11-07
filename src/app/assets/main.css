@@ -7544,6 +7544,10 @@ margin-top: 20px;
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .mi-section-title:after{
+
+    margin: auto;
+  }
   .cta-title {
     font-size: 30px;
   }

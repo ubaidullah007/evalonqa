@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
     <div>
-      <section className="Agenko-contact pt-130 pb-80">
+      <section className="Agenko-contact pt-50 pb-80">
         <div className="container">
           <div className="row">
             {/* Left Contact Info */}

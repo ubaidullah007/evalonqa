@@ -30,7 +30,7 @@ const Footer = () => {
         <span></span>
       </div>
 
-      <div className="footer-widget-area pb-80">
+      <div className="footer-widget-area pb-50">
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-6">

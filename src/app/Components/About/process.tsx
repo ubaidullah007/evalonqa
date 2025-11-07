@@ -31,7 +31,7 @@ const Process = (data : any) => {
 
 
     return (
-        <section className="agk-process pt-70 pb-90">
+        <section className="agk-process pt-70 pb-50">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
