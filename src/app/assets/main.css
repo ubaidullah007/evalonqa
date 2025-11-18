@@ -6238,7 +6238,7 @@ label {
   border: 1px solid rgba(255, 255, 255, 0.15);
   background-color: #1A1B1D;
   padding: 15px 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: var(--white-color);
   font: 700 20px var(--heading-font);
 }
@@ -6762,7 +6762,7 @@ color: black !important;
   color: #000;
  }
   .cs_nav .cs_nav_list > li > ul {
-    left: 0;
+    left: -105px;
     top: calc(100% + 15px);
  }
   .cs_nav .cs_nav_list > li:hover > ul {
@@ -6788,13 +6788,14 @@ color: black !important;
     color: currentColor;
  }
   .cs_nav .cs_nav_list ul {
-    width: 230px;
+    width: 576px;
+    padding: 20px;
+    left: -105px ;
     background-color:#18191b;
     position: absolute;
     border-top: 2px solid #40ffff;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
     box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-    padding: 10px 0;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
@@ -7557,6 +7558,12 @@ margin-top: 20px;
   .hero-wrapper-two .shape.shape-two{
     display: none
   }
+
+  .Agenko-iconic-box.style-two .icon{
+
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .cs-mobile-dropdown .dropdown-content {
   max-height: 0;
@@ -7787,6 +7794,44 @@ margin-top: 20px;
 }
 .contact-error{
 
-    margin-top: -24px;
+    margin-bottom: 10px;
     display: block;
 }
+
+
+.cs_nav .cs_nav_list ul .custom-eqa-dropdown a:hover{
+  background-color: transparent;
+  color: white !important;
+}
+
+.cs_nav .cs_nav_list ul .custom-eqa-dropdown a{
+  border: 1px solid !important;
+  border-color: transparent !important;
+}
+.cs_nav .cs_nav_list ul .custom-eqa-dropdown a::after{
+  display: none !important;
+}
+.our-color{
+color: #40ffff;
+font-size: 20px !important;
+}
+
+
+ .cs_nav .cs_nav_list ul .custom-eqa-dropdown a:hover {  background: #252525;
+    border-radius: 7px;
+    border: 1px solid #40ffff !important;
+  color: #40ffff !important;
+  }
+
+    .AI-GUIDE_EMM{
+
+      width: 768px !important;
+      left: -300px !important;
+    }
+
+
+
+    .cs_nav .cs_nav_list > li > a:hover{
+color:#40ffff !important ;
+
+    }

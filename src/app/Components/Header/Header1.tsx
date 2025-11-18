@@ -99,48 +99,57 @@ export default function Header1({ variant }: any) {
       ></div>
 
       {/* Animated Side Menu */}
-      <div className={`d-block d-md-flex  mobile-menu ${mobileToggle ? "open" : ""}`}>
+      <div
+        className={`d-block d-md-flex  mobile-menu ${
+          mobileToggle ? "open" : ""
+        }`}
+      >
         <button className="close-btn" onClick={() => setMobileToggle(false)}>
           <span></span>
           <span></span>
         </button>
         <Nav setMobileToggle={setMobileToggle} />
 
-       <div>
-
-           <div className="mt-80">
-                  <div className="footer-widget footer-contact-widget mb-40 pf_fadeup">
-                    <div className="footer-content">
-                      <h4 className="widget-title">Get In Touch</h4>
-                      <div className="Agenko-iconic-box style-three mb-30">
-                        <div className="icon">
-                          <i className="bi bi-envelope"></i>
-                        </div>
-                        <div className="content">
-                          <h6>Email</h6>
-                          <p>
-                            <a href="mailto:info@Agenko.com">
-                              info@evalonqa.com
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="Agenko-iconic-box style-three">
-                        <div className="icon">
-                          <i className="bi bi-telephone"></i>
-                        </div>
-                        <div className="content">
-                          <h6>Phone</h6>
-                          <p>
-                            <a href="tel:+92 336 1212123">+92 336 1212123</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+        <div>
+          <div className="main-button mt-4">
+            <Link href="/contact" className="theme-btn style-one">
+              <span className="text-flip">
+                <span className="text">Schedule a Consultation</span>
+                <span className="text">Schedule a Consultation</span>
+              </span>
+            </Link>
+          </div>
+          <div className="mt-40">
+            <div className="footer-widget footer-contact-widget mb-40 pf_fadeup">
+              <div className="footer-content">
+                <h4 className="widget-title">Get In Touch</h4>
+                <div className="Agenko-iconic-box style-three mb-30">
+                  <div className="icon">
+                    <i className="bi bi-envelope"></i>
+                  </div>
+                  <div className="content">
+                    <h6>Email</h6>
+                    <p>
+                      <a href="mailto:info@Agenko.com">info@evalonqa.com</a>
+                    </p>
                   </div>
                 </div>
-       </div>
+
+                <div className="Agenko-iconic-box style-three">
+                  <div className="icon">
+                    <i className="bi bi-telephone"></i>
+                  </div>
+                  <div className="content">
+                    <h6>Phone</h6>
+                    <p>
+                      <a href="tel:+92 336 1212123">+92 336 1212123</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

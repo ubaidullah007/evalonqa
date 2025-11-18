@@ -2,7 +2,7 @@ import React from 'react';
 
 const Process2 = () => {
     return (
-        <section className="agk-work-process pt-100 pb-100 text-md-start text-center">
+        <section className="agk-work-process pt-5 pt-md-100 pb-5 pb-md-100 text-md-start text-center">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7">

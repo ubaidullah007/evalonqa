@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "./assets/main.css";
+import WhatsApp from "./Components/whatsapp";
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
@@ -36,7 +37,11 @@ export default function RootLayout({ children } : any ) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${source_sans.variable} ${roboto.variable}`}>
+
+        
         {children}
+     
+     <WhatsApp />
       </body>
     </html>
   );

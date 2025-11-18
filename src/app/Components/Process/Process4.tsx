@@ -2,7 +2,7 @@ import React from 'react';
 
 const Process2 = () => {
     return (
-        <section className="agk-work-process pt-100 pb-100">
+        <section className="agk-work-process pt-5 pt-md-100 pb-5 pb-md-100">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7">
@@ -28,7 +28,7 @@ const Process2 = () => {
                             <div className="icon">
                                 <i className="bi bi-database-gear"></i>
                             </div>
-                            <div className="content">
+                            <div className="content text-center text-md-start">
                                 <h4 className="title text-md-start text-center">AI-Driven Test Data</h4>
                                 <p>
                                     Automatically build realistic test data from your schemas. 
@@ -45,7 +45,7 @@ const Process2 = () => {
                             <div className="icon">
                                 <i className="bi bi-code-slash"></i>
                             </div>
-                            <div className="content">
+                            <div className="content text-center text-md-start">
                                 <h4 className="title text-md-start text-center">AI-Powered Playwright</h4>
                                 <p>
                                     Write and optimize Playwright tests in a fraction of the time. 
@@ -62,7 +62,7 @@ const Process2 = () => {
                             <div className="icon">
                                 <i className="bi bi-cursor-text"></i>
                             </div>
-                            <div className="content">
+                            <div className="content text-center text-md-start">
                                 <h4 className="title text-md-start text-center">Smarter Cursor Workflows</h4>
                                 <p>
                                     Experience seamless test writing with AI-assisted Cursor workflows. 
@@ -79,7 +79,7 @@ const Process2 = () => {
                             <div className="icon">
                                 <i className="bi bi-bug"></i>
                             </div>
-                            <div className="content">
+                            <div className="content text-center text-md-start">
                                 <h4 className="title text-md-start text-center">Intelligent Bug Reports</h4>
                                 <p>
                                     Convert informal bug notes into complete, structured reports. 

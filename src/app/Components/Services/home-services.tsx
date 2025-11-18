@@ -74,15 +74,15 @@ export default function HomeServices() {
           {features.map((item, index) => (
             <div key={index} className="col-md-4 mb-4">
               <div
-                className="p-4 h-100 rounded shadow-sm"
+                className="p-4 h-100 rounded shadow-sm text-center text-md-start"
                 style={{
                   backgroundColor: "#1a1a1a",
                   border: "1px solid #2c2c2c"
                 }}
               >
-                <div className=" mb-3">
+                <div className=" mb-3 m-auto m-md-0">
                   <div
-                    className="d-flex align-items-center justify-content-center rounded mr-3"
+                    className="d-flex align-items-center justify-content-center rounded  m-auto m-md-0 mr-md-3"
                     style={{
                       width: "50px",
                       height: "50px",

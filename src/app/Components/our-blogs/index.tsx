@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Banner = ({title , desc}) => {
     return (
         <div>
-            <section className="mt-80 pb-80 bg-black">
+            <section className="mt-80 pb-md-5 pb-0 bg-black">
                 <div className="shape shape-circle1"><span></span></div>
                 <div className="shape shape-circle2"><span></span></div>
                 <div className="container">
