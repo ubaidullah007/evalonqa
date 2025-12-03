@@ -87,13 +87,10 @@ const HeroBanner2 = () => {
 
                         <div className="col-lg-8">
                             <div className="hero-image style-one pf_fadeup">
-                                <video
-                                    src="/assets/images/pages/new-images/Bannervideo.mp4"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="w-100 rounded-3"
+                                <img
+                                    src="/assets/images/pages/new-images/startups.jpg"
+                                 alt=''
+                                    className=" rounded-3"
                                 />
                             </div>
                         </div>

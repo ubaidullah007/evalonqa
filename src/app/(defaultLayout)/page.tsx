@@ -18,13 +18,25 @@ import HomeServices from '../Components/Services/home-services';
 const page = () => {
     return (
         <div>
+            <div className="relative w-100 h-100  overflow-hidden" style={{marginTop:"94px"}}>
+                <video
+                    src="/bg-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-100 h-100 object-fit-cover"
+                ></video>
+
+           
+            </div>
             <HeroBanner2></HeroBanner2>
             <Process4></Process4>
             {/* <About1></About1> */}
             {/* <Services2></Services2> */}
             {/* <Project2></Project2> */}
-            <HomeServices/>
- 
+            <HomeServices />
+
             <Process2></Process2>
             <Testimonial1></Testimonial1>
             {/* <Blog1></Blog1>         */}
