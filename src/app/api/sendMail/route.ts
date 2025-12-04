@@ -2,21 +2,27 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
+    // 1. Data receive kar rahay hain frontend se
     const { name, email, subject, message, primary_interest } = await req.json();
 
+    // 2. Transporter setup (Zoho Credentials ke sath)
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com", // or your SMTP host
-      port: 465,
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT), // Port ko number banana zaroori hai
       secure: true,
       auth: {
-        user: "info@gmail.com",
-        pass: "password", // remove spaces and quotes issue
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"Website Contact" <${'info@gmail.com'}>`,
-      to: "info@evalonqa.com", // where you want to receive messages
+      from: '"Website Contact" <info@evalonqa.com>',
+
+      to: "info@evalonqa.com",
+
+      replyTo: email,
+
       subject: `Consultation Form: ${subject}`,
       html: `
         <h3>New Consultation Request</h3>
@@ -29,6 +35,7 @@ export async function POST(req) {
     });
 
     return Response.json({ success: true });
+
   } catch (error) {
     console.error("Email error:", error);
     return Response.json({ success: false, error: error.message }, { status: 500 });
