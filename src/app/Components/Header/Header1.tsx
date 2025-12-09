@@ -142,7 +142,7 @@ export default function Header1({ variant }: any) {
                   <div className="content">
                     <h6>Phone</h6>
                     <p>
-                      <a href="tel:+92 336 1212123">+92 336 1212123</a>
+                      <a href="tel:+92 349 5709219">+92 349 5709219</a>
                     </p>
                   </div>
                 </div>
