@@ -112,7 +112,7 @@ const Footer = () => {
                         <div className="content">
                           <h6>Email</h6>
                           <p>
-                            <a href="mailto:info@Agenko.com">
+                            <a href="mailto:info@evalonqa.com">
                               info@evalonqa.com
                             </a>
                           </p>
