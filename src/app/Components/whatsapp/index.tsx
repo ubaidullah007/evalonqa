@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function WhatsApp() {
-  const phone = "923361212123";
+  const phone = "923495709219";
   const text = "";
 
   return (
