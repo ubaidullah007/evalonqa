@@ -54,7 +54,7 @@ const Process2 = () => {
                             </div>
                             <div className="content">
                                 <h4 className="title">Integrate & Execute</h4>
-                                <p>We embed our QA experts within your team, applying AI-driven insights and proven testing frameworks to enhance product reliability and performance.</p>
+                                <p>We integrate our QA experts within your team, applying AI-driven insights and proven testing frameworks to enhance product reliability and performance.</p>
                                 <div className="step">Step-03</div>
                             </div>
                         </div>
