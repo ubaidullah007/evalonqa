@@ -66,7 +66,7 @@ const data =  {
             {
                 id: 4,
                 title: "Collaborative Partnership",
-                desc: "Consider us your embedded QA arm — adapting to your pace, aligning with your goals, and delivering measurable value.",
+                desc: "Consider us your dedicated QA arm, adapting to your pace, aligning with your goals, and delivering measurable value.",
                 icon: "bi bi-people"
             }
         ],
