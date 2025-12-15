@@ -15,7 +15,7 @@ const Process2 = () => {
                         <div className="text-md-start text-center text-box mb-55 pf_fadeup">
                             <p>
                                 Evalon QA blends human expertise with AI precision to redefine quality assurance. 
-                                Our embedded QA engineers use intelligent automation to enhance testing speed, 
+                                Our QA engineers use intelligent automation to enhance testing speed, 
                                 coverage, and accuracy — without losing human oversight.
                             </p>
                         </div>
