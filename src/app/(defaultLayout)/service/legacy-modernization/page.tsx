@@ -76,7 +76,7 @@ const data =  {
         title: "Expertise That Scales With You",
         highlights: [
             "We partner with your internal QA and development teams for smooth, sustainable modernization.",
-            "Our US-based engineers embed directly into your workflows for transparency and seamless collaboration.",
+            "Our US-based engineers integrate directly into your workflows for transparency and seamless collaboration.",
             "Automation frameworks are tailored for your stack, product goals, and release cadence.",
             "Continuous improvement ensures your QA evolves alongside your technology.",
             "Empower your team through hands-on enablement, training, and ongoing optimization."
