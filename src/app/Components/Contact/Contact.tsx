@@ -218,7 +218,7 @@ const Contact = () => {
                           <strong>Primary Interest</strong>
                         </label>
 
-                        {["Embedded Automation QA", "Embedded Manual QA", "Unsure / Other"].map((interest, i) => (
+                        {[" Automation QA", " Manual QA", "Unsure / Other"].map((interest, i) => (
                           <div className="form-check" key={i}>
                             <input
                               type="radio"
