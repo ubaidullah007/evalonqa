@@ -5,7 +5,7 @@ export async function POST(req) {
     // 1. Data receive kar rahay hain frontend se
     const { name, email, subject, message, primary_interest } = await req.json();
 
-    // 2. Transporter setup (Zoho Credentials ke sath)
+    // 2. Transporter setup (Google/Gmail SMTP credentials ke sath)
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT), // Port ko number banana zaroori hai
@@ -17,9 +17,10 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: '"Website Contact" <info@evalonqa.com>',
+      from: `"Website Contact" <${process.env.SMTP_USER}>`,
 
-      to: "info@evalonqa.com",
+      // Recipient env var se aata hai taake code change kiye baghair badla ja sakay
+      to: process.env.CONTACT_TO || "ahmad.abdullah@evalonqa.com",
 
       replyTo: email,
 

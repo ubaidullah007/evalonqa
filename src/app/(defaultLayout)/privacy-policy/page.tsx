@@ -42,7 +42,7 @@ const Page = () => {
           <h4 className="mt-4">5. Your Rights</h4>
           <p>
             You can request access, correction, or deletion of your personal data at any time by contacting us at 
-            <a href="mailto:info@evalonqa.com" className="ml-1">info@evalonqa.com</a>
+            <a href="mailto:ahmad@getevalonqa.com" className="ml-1">ahmad@getevalonqa.com</a>
           </p>
 
           <h4 className="mt-4">6. Policy Updates</h4>

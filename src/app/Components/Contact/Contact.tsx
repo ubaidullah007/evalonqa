@@ -68,7 +68,7 @@ const Contact = () => {
                 <ul>
                   <li>
                     <div className="phone">
-                      <a href="tel:+923495709219">+92 349 5709219</a>
+                      <a href="tel:+923431833235">+92 343 1833235</a>
                     </div>
                   </li>
 
@@ -86,8 +86,8 @@ const Contact = () => {
                       <div className="content">
                         <h3>Email</h3>
                         <p>
-                          <a href="mailto:info@evalonqa.com">
-                            info@evalonqa.com
+                          <a href="mailto:ahmad@getevalonqa.com">
+                            ahmad@getevalonqa.com
                           </a>
                         </p>
                       </div>

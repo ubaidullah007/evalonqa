@@ -130,7 +130,7 @@ export default function Header1({ variant }: any) {
                   <div className="content">
                     <h6>Email</h6>
                     <p>
-                      <a href="mailto:info@Agenko.com">info@evalonqa.com</a>
+                      <a href="mailto:ahmad@getevalonqa.com">ahmad@getevalonqa.com</a>
                     </p>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function Header1({ variant }: any) {
                   <div className="content">
                     <h6>Phone</h6>
                     <p>
-                      <a href="tel:+92 349 5709219">+92 349 5709219</a>
+                      <a href="tel:+923431833235">+92 343 1833235</a>
                     </p>
                   </div>
                 </div>
