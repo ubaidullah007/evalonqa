@@ -42,15 +42,34 @@ Version: 1.0
 /* Base CSS */
 
 :root {
-  --primary-color: #40ffff;
-  --heading-color: #1A1A1A;
-  --primary-black-color: #0E0F11;
-  --white-color: #ffffff;
-  --text-color: #9E9FA0;
-  --border-color: #313131;
-  --gray-dark: #18191B;
-  --heading-font: "Source Sans 3", serif;
-  --body-font: "Roboto", serif;
+  /* Accent. Carries two jobs at once: text on the dark base (27 rules) and a
+     button/badge background with dark text on top (23 rules). That rules out a
+     mid-tone -- it has to stay light enough for both. Verified 8.7:1 as text on
+     the base and 8.8:1 for --heading-color on top of it. */
+  --primary-color: #38BDF8;
+  --primary-color-strong: #0EA5E9;
+  --primary-color-soft: #7DD3FC;
+
+  /* Text that sits ON the accent or on a light surface. */
+  --heading-color: #07121F;
+
+  /* Base surfaces. Navy-tinted rather than neutral black -- the slight blue
+     cast is what separates "engineering" from "creative agency". */
+  --primary-black-color: #0B1220;
+  --gray-dark: #111C2F;
+  --border-color: #22314A;
+
+  /* Foreground on dark. Not pure #fff: at 19:1 against the base it glares and
+     makes long copy harder to read. #F1F5F9 still clears AA at 17:1. */
+  --white-color: #F1F5F9;
+  --text-color: #94A3B8;
+
+  /* Both stacks previously fell back to `serif`, so any webfont failure
+     swapped a sans face for a serif one. */
+  --heading-font: "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --body-font: "Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
 }
 
 
@@ -2971,7 +2990,7 @@ label {
 .Agenko-iconic-box.style-four {
   background-color: black;
   border-radius: 10px;
-  border-bottom: 1px solid #6cffff;
+  border-bottom: 1px solid var(--primary-color-soft);
   padding: 35px 40px 30px;
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -6726,7 +6745,7 @@ color: white ;
   color: white !important;
 }
 .cs_nav .cs_nav_list ul a:hover{
-background-color: #40ffff;
+background-color: var(--primary-color);
 color: black !important;
 
 }
@@ -6785,7 +6804,7 @@ color: black !important;
     left: -105px ;
     background-color:#18191b;
     position: absolute;
-    border-top: 2px solid #40ffff;
+    border-top: 2px solid var(--primary-color);
     -webkit-box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
     box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
     z-index: 100;
@@ -7339,7 +7358,7 @@ color: black !important;
   right: -100%;
   width: 90%;
   height: 100%;
-  background: linear-gradient(135deg, #000000 40%, #6cffff);
+  background: linear-gradient(135deg, #000000 40%, var(--primary-color-soft));
 
   box-shadow: -3px 0 15px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease;
@@ -7491,7 +7510,7 @@ margin-top: 20px;
   height: 200%;
   background: radial-gradient(
     circle at center,
-    rgba(108, 255, 255, 0.08),
+    rgba(125, 211, 252, 0.08),
     transparent 70%
   );
   transform: rotate(20deg);
@@ -7518,7 +7537,7 @@ margin-top: 20px;
 }
 
 .btn-cta {
-  background: #6cffff;
+  background: var(--primary-color-soft);
   color: #000 !important;
   font-weight: 600;
   font-size: 18px;
@@ -7526,13 +7545,13 @@ margin-top: 20px;
   border-radius: 50px;
   border: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(108, 255, 255, 0.4);
+  box-shadow: 0 0 15px rgba(125, 211, 252, 0.4);
 }
 
 .btn-cta:hover {
-  background: #4cecec;
+  background: var(--primary-color-strong);
   transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(108, 255, 255, 0.6);
+  box-shadow: 0 0 25px rgba(125, 211, 252, 0.6);
 }
 
 /* Mobile Responsive */
@@ -7656,20 +7675,20 @@ margin-top: 20px;
   padding: 25px;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 6px 15px rgba(64, 255, 255, 0.3),
+  box-shadow: inset 0 6px 15px rgba(56, 189, 248, 0.3),
               0 8px 20px rgba(0, 0, 0, 0.2); /* inset + outer shadow */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .human-Agenko-iconic-box:hover {
   transform: translateY(-8px);
-  box-shadow: inset 0 6px 15px rgba(64, 255, 255, 0.4),
+  box-shadow: inset 0 6px 15px rgba(56, 189, 248, 0.4),
               0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .human-Agenko-iconic-box .human-icon {
   font-size: 48px;
-  color: #40ffff; /* main color for icon */
+  color: var(--primary-color); /* main color for icon */
   background: rgba(255, 255, 255, 0.1);
   width: 80px;
   height: 80px;
@@ -7734,12 +7753,12 @@ margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
-  border: 1px solid rgba(108, 255, 255, 0.15);
+  border: 1px solid rgba(125, 211, 252, 0.15);
 }
 
 .mi-content-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 22px rgba(108, 255, 255, 0.25);
+  box-shadow: 0 8px 22px rgba(125, 211, 252, 0.25);
 }
 
 .mi-section-title {
@@ -7754,7 +7773,7 @@ margin-top: 20px;
   display: block;
   width: 55px;
   height: 3px;
-  background: #6cffff;
+  background: var(--primary-color-soft);
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -7771,7 +7790,7 @@ margin-top: 20px;
 .mi-mission-list i,
 .mi-values-list i {
   font-size: 1.2rem;
-  color: #6cffff;
+  color: var(--primary-color-soft);
   margin-right: 10px;
   margin-top: 2px;
 }
@@ -7804,15 +7823,15 @@ margin-top: 20px;
   display: none !important;
 }
 .our-color{
-color: #40ffff;
+color: var(--primary-color);
 font-size: 20px !important;
 }
 
 
  .cs_nav .cs_nav_list ul .custom-eqa-dropdown a:hover {  background: #252525;
     border-radius: 7px;
-    border: 1px solid #40ffff !important;
-  color: #40ffff !important;
+    border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
   }
 
     .AI-GUIDE_EMM{
@@ -7824,7 +7843,7 @@ font-size: 20px !important;
 
 
     .cs_nav .cs_nav_list > li > a:hover{
-color:#40ffff !important ;
+color:var(--primary-color) !important ;
 
     }
 /*---------------------------------------
@@ -7842,3 +7861,48 @@ color:#40ffff !important ;
   .pb-md-100 {
     padding-bottom: 100px !important; }
 }
+
+/*---------------------------------------
+    - Type & surface refinement
+    Appended last so it layers over the template without editing the
+    scattered rules above. Everything here is additive.
+-----------------------------------------*/
+
+/* Display type at 85px/52px shipped with default tracking, which reads loose
+   at that size. Tightening is the clearest "considered" typographic cue. */
+h1,
+h2 {
+  letter-spacing: -0.022em; }
+
+h3,
+h4 {
+  letter-spacing: -0.012em; }
+
+/* Keep headline ragging even instead of leaving one orphan word on line two. */
+h1,
+h2,
+h3 {
+  text-wrap: balance; }
+
+p {
+  text-wrap: pretty; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* The accent has a darker step now, so the primary button can actually
+   respond to hover rather than only flipping its label. */
+.theme-btn.style-one:hover {
+  background-color: var(--primary-color-strong); }
+
+/* Template had no visible keyboard-focus state. Scoped to :focus-visible so
+   it never fires on mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 2px; }

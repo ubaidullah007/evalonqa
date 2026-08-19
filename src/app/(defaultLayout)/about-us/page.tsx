@@ -19,7 +19,7 @@ const page = async () => {
             <About1 />
             <OurMission />
             <Process />
-            <section className="cta-dark-section text-center text-white py-5 bg-gradient-to-r from-black via-[#042b2b] to-[#6cffff]">
+            <section className="cta-dark-section text-center text-white py-5">
                 <div className="container mx-auto px-4">
                     <h2 className="cta-title mb-3 text-3xl font-semibold">
                         Ready to Elevate Your QA Strategy?
@@ -30,7 +30,7 @@ const page = async () => {
                     </p>
                     <Link
                         href="/contact"
-                        className="btn mt-4 btn-cta inline-block bg-[#6cffff] text-black font-medium py-3 px-6 rounded-full hover:bg-white transition-all duration-300"
+                        className="btn mt-4 btn-cta"
                     >
                         Contact Us
                     </Link>

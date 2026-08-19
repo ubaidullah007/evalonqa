@@ -70,7 +70,7 @@ const testimonials = [
                       height: "70px",
                       cursor: "pointer",
                       boxShadow: "0 0 20px rgba(0,0,0,0.4)",
-                      backgroundColor:"#6cffff5e !important"
+                      backgroundColor: "rgba(56, 189, 248, 0.37)"
                     }}
                   >
                     <i className="bi bi-play-fill fs-2"></i>
