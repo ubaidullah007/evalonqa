@@ -73,7 +73,7 @@ const Footer = () => {
               <div className="footer-widget footer-contact-info-widget mb-40 pf_fadeup">
                 <div className="footer-content mb-25">
                   <h4 className="widget-title">Main Address</h4>
-                  <p>Office #402, Gulberg, Lahore, Pakistan</p>
+                  <p>Bahria Town, Lahore, Pakistan</p>
                 </div>
               </div>
             </div>

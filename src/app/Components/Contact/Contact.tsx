@@ -76,7 +76,7 @@ const Contact = () => {
                     <div className="Agenko-info-box">
                       <div className="content">
                         <h3>Address</h3>
-                        <p>Office #402, Gulberg, Lahore, Pakistan</p>
+                        <p>Bahria Town, Lahore, Pakistan</p>
                       </div>
                     </div>
                   </li>
