@@ -37,7 +37,7 @@ const Footer = () => {
               <div className="footer-widget footer-about-widget mb-40 pf_fadeup">
                 <div className="footer-content">
                   <div className="footer-logo">
-                    <a href="#">
+                    <Link href="/">
                       {" "}
                       <Image
                         src="/assets/images/creative-agency/logo/logo-main.png"
@@ -45,7 +45,7 @@ const Footer = () => {
                         width={151}
                         height={40}
                       />
-                    </a>
+                    </Link>
                   </div>
                   <p>
                     EvalonQA — AI-Powered Automation That Thinks Like You

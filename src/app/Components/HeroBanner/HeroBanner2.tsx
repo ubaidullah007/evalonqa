@@ -24,7 +24,7 @@ const HeroBanner2 = () => {
                                         <span>Evalon QA</span> blends expert human testers with advanced AI-driven automation to deliver faster, smarter, and more reliable software testing ensuring zero compromises in quality or precision.
                                     </p>
                                     <div className="hero-button d-flex justify-content-md-start justify-content-center">
-                                        <Link href="#" className="theme-btn style-one">
+                                        <Link href="/about-us" className="theme-btn style-one">
                                             <span className="text-flip">
                                                 <span className="text">Read More</span>
                                                 <span className="text">Read More</span>

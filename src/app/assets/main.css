@@ -58,8 +58,6 @@ Version: 1.0
     - Margin & Padding
 -----------------------------------------*/
 /*-- Margin Top --*/
-.mt-5 {
-  margin-top: 5px; }
 
 .mt-10 {
   margin-top: 10px; }
@@ -239,8 +237,6 @@ Version: 1.0
   margin-top: 300px;
 }
 /*-- Margin Bottom --*/
-.mb-5 {
-  margin-bottom: 5px; }
 
 .mb-10 {
   margin-bottom: 10px; }
@@ -782,8 +778,6 @@ Version: 1.0
   margin-right: 300px;
 }
 /*-- Padding Top --*/
-.pt-5 {
-  padding-top: 5px; }
 
 .pt-10 {
   padding-top: 10px; }
@@ -963,8 +957,6 @@ Version: 1.0
   padding-top: 300px; }
 
 /*-- Padding Bottom --*/
-.pb-5 {
-  padding-bottom: 5px; }
 
 .pb-10 {
   padding-bottom: 10px; }
@@ -7835,3 +7827,18 @@ font-size: 20px !important;
 color:#40ffff !important ;
 
     }
+/*---------------------------------------
+    - Responsive section padding
+    Process2/Process4 use `pt-5 pt-md-100 pb-5 pb-md-100` in markup, but
+    the -md-100 definitions never existed, so those sections fell back to
+    Bootstrap's pt-5/pb-5 (3rem) at every width instead of 100px on
+    desktop. !important is required here because Bootstrap's spacing
+    utilities carry it. Mobile intentionally keeps the 3rem fallback.
+-----------------------------------------*/
+@media (min-width: 768px) {
+  .pt-md-100 {
+    padding-top: 100px !important; }
+
+  .pb-md-100 {
+    padding-bottom: 100px !important; }
+}
