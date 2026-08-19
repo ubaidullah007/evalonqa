@@ -8205,10 +8205,15 @@ select:focus-visible {
 
 /* Once stuck the header sits over ordinary content, so it goes opaque --
    glass over arbitrary sections reads as muddy rather than deliberate. */
+/* Stuck, the header is opaque, so the blur buys nothing -- and compositing
+   a backdrop-filter against content scrolling underneath is what produced
+   the dark block behind the CTA. Drop the filter and go fully opaque. */
 .cs_site_header.cs-gescout_sticky {
-  background-color: rgba(11, 18, 32, 0.94) !important;
+  background-color: var(--primary-black-color) !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   border-bottom-color: var(--border-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28); }
 
 /* Nav links previously resolved to color: var(--title), and --title is
    defined nowhere, so the colour silently fell through to inherit. */
@@ -8259,3 +8264,21 @@ select:focus-visible {
   .cs_nav .cs_nav_list > li > a::after {
     transition: none; }
 }
+
+/*---------------------------------------
+    - Sticky header wash removal
+    The template washes the stuck header with rgba(0,0,0,0.34) twice --
+    once on .header_sticky_style1.cs-gescout_sticky and again as a
+    .container::before overlay -- and borders it in #a3a0a0. That was
+    designed for a light template. On the navy palette it reads as a dark
+    smear sitting behind the CTA. Neutralise both and let the header's own
+    opaque background carry the surface.
+-----------------------------------------*/
+.header_sticky_style1.cs-gescout_sticky {
+  background-color: var(--primary-black-color) !important;
+  border-bottom: 1px solid var(--border-color) !important; }
+
+.header_sticky_style1.cs_site_header.header_style_2.cs_style_1
+  .container::before {
+  background-color: transparent !important;
+  border-bottom: 0 !important; }
