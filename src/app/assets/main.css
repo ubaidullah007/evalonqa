@@ -7910,32 +7910,6 @@ select:focus-visible {
   border-radius: 2px; }
 
 /*---------------------------------------
-    - Masthead video
-    The clip has no intrinsic height cap, so at 1440px wide it rendered
-    ~810px tall and consumed the entire first screen -- pushing the
-    headline, value proposition and CTA below the fold. Capped to a band
-    so the hero is visible on landing, with a fade into the section below.
------------------------------------------*/
-.masthead-video {
-  height: clamp(200px, 40vh, 400px); }
-
-.masthead-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block; }
-
-.masthead-video::after {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  bottom: 0;
-  height: 45%;
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent,
-    var(--primary-black-color)); }
-
-/*---------------------------------------
     - Hero cleanup
 -----------------------------------------*/
 /* The hero h1's 160px line-height looks like a mistake against a 91px font,

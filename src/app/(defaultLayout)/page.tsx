@@ -20,7 +20,7 @@ const page = () => {
         <div>
             {/* Decorative masthead video. `preload="metadata"` keeps the 2.8MB
                 file from competing with the hero for initial bandwidth. */}
-            <div className="masthead-video position-relative w-100 overflow-hidden" style={{ marginTop: "94px" }}>
+            <div className="position-relative w-100 overflow-hidden" style={{ marginTop: "94px" }}>
                 <video
                     src="/bg-video.mp4"
                     autoPlay
@@ -30,7 +30,7 @@ const page = () => {
                     preload="metadata"
                     aria-hidden="true"
                     tabIndex={-1}
-                    className="w-100 h-100 object-fit-cover"
+                    className="w-100 object-fit-cover"
                 ></video>
             </div>
             <HeroBanner2></HeroBanner2>
