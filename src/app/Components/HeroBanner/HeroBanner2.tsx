@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -6,8 +5,6 @@ const HeroBanner2 = () => {
     return (
         <section className="agk-hero">
             <div className="hero-wrapper-two">
-                <div className="shape shape-one d-none d-md-block"><span><Image className="" src="/assets/images/pages/new-images/quote.png" alt="img" width={50} height={50} style={{ filter: "sepia(1)" }} /></span></div>
-                <div className="shape shape-two"><span><Image className="animate-float-bob-y" src="/assets/images/digital-agency/hero/shape/shape2.png" alt="img" width={40} height={80} /></span></div>
                 <div className="shape circle-one"><span></span></div>
                 <div className="shape circle-two"><span></span></div>
                 <div className="container">
