@@ -4,7 +4,23 @@ import React from 'react';
 const HeroBanner2 = () => {
     return (
         <section className="agk-hero">
-            <div className="hero-wrapper-two">
+            <div className="hero-wrapper-two has-video">
+                {/* Full-bleed background video. The site header is
+                    position:absolute over the page, so the clip runs edge to
+                    edge behind both the header and the hero copy. */}
+                <video
+                    className="hero-video"
+                    src="/bg-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
+                    tabIndex={-1}
+                ></video>
+                <span className="hero-video__scrim" aria-hidden="true"></span>
+
                 <div className="shape circle-one"><span></span></div>
                 <div className="shape circle-two"><span></span></div>
                 <div className="container">

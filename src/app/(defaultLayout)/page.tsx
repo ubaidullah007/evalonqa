@@ -18,21 +18,6 @@ import HomeServices from '../Components/Services/home-services';
 const page = () => {
     return (
         <div>
-            {/* Decorative masthead video. `preload="metadata"` keeps the 2.8MB
-                file from competing with the hero for initial bandwidth. */}
-            <div className="position-relative w-100 overflow-hidden" style={{ marginTop: "94px" }}>
-                <video
-                    src="/bg-video.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    aria-hidden="true"
-                    tabIndex={-1}
-                    className="w-100 object-fit-cover"
-                ></video>
-            </div>
             <HeroBanner2></HeroBanner2>
             <Process4></Process4>
             {/* <About1></About1> */}
