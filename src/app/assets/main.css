@@ -7868,9 +7868,11 @@ color:var(--primary-color) !important ;
     scattered rules above. Everything here is additive.
 -----------------------------------------*/
 
-/* Display type at 85px/52px shipped with default tracking, which reads loose
-   at that size. Tightening is the clearest "considered" typographic cue. */
-h1,
+/* Display type shipped with default tracking, which reads loose at 52px.
+   h1 is deliberately EXCLUDED: the hero headline is two spans, and its
+   sibling text-box / "Pro" badge are positioned assuming it wraps to two
+   lines. Tightening it made both spans fit on one line, which collapsed
+   the badge and paragraph on top of the headline. Leave h1 alone. */
 h2 {
   letter-spacing: -0.022em; }
 
@@ -7878,8 +7880,8 @@ h3,
 h4 {
   letter-spacing: -0.012em; }
 
-/* Keep headline ragging even instead of leaving one orphan word on line two. */
-h1,
+/* Keep headline ragging even instead of leaving one orphan word on line two.
+   h1 excluded for the same wrap-sensitivity reason as above. */
 h2,
 h3 {
   text-wrap: balance; }
