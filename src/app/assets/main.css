@@ -2501,7 +2501,7 @@ label {
   padding: 5px;
   border-radius: 40px;
   border: 1px solid var(--border-color);
-  background: #0E0F11;
+  background: var(--primary-black-color);
   margin-left: 30px;
 }
 @media screen and (max-width: 991px) {
@@ -2538,7 +2538,7 @@ label {
   transition: all 0.2s;
   z-index: 99;
   padding: 10px 10px;
-  background-color: #0E0F11;
+  background-color: var(--primary-black-color);
   height: auto;
   text-align: left;
   -webkit-box-shadow: 0px 30px 80px 15px rgba(0, 0, 0, 0.09);
@@ -2596,7 +2596,7 @@ label {
 }
 .header-navigation .main-menu ul > li:hover > a {
   color: var(--primary-color);
-  background-color: #18191B;
+  background-color: var(--gray-dark);
 }
 .header-navigation .main-menu ul > li:hover > .sub-menu {
   opacity: 1;
@@ -2988,7 +2988,7 @@ label {
   color: var(--primary-color);
 }
 .Agenko-iconic-box.style-four {
-  background-color: black;
+  background-color: var(--gray-dark);
   border-radius: 10px;
   border-bottom: 1px solid var(--primary-color-soft);
   padding: 35px 40px 30px;
@@ -4735,7 +4735,7 @@ label {
 }
 
 .hero-wrapper-one {
-  background-color: #000;
+  background-color: var(--primary-black-color);
   padding: 180px 0 200px;
   position: relative;
   z-index: 1;
@@ -4900,7 +4900,7 @@ label {
   position: relative;
   z-index: 1;
   padding:  90px 0 70px;
-  background-color: #000;
+  background-color: var(--primary-black-color);
   overflow: hidden;
 }
 .hero-wrapper-two .shape {
@@ -6185,7 +6185,7 @@ label {
   position: relative;
   border-radius: 20px;
   border: 1px solid #313131;
-  background-color: #0E0F11;
+  background-color: var(--primary-black-color);
   margin-right: 100px;
   padding: 60px 40px;
   z-index: 1;
@@ -6544,7 +6544,7 @@ label {
   border-bottom: 1px solid #535353;
 }
 .cs_site_header.cs_style_1.cs-sticky-active {
-  background-color: #000;
+  background-color: var(--primary-black-color);
   box-shadow: 0 10px 10px -10px rgba(33, 43, 53, 0.1);
 }
 .cs_top_nav {
@@ -6802,7 +6802,7 @@ color: black !important;
     width: 576px;
     padding: 20px;
     left: -105px ;
-    background-color:#18191b;
+    background-color: var(--gray-dark);
     position: absolute;
     border-top: 2px solid var(--primary-color);
     -webkit-box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
@@ -7043,11 +7043,11 @@ color: black !important;
   display: none;
 }
 .cs-gescout_sticky{
-  background-color: #000;
+  background-color: var(--primary-black-color);
 }
 
 .header_sticky_style2 .cs-munu_toggle span, .header_sticky_style2 .cs-munu_toggle span:before, .header_sticky_style2 .cs-munu_toggle span:after{
-  background-color: #000;
+  background-color: var(--white-color);
 }
 
 }
@@ -7389,7 +7389,7 @@ color: black !important;
 .menu-toggle span {
   display: block;
   height: 3px;
-  background: #000;
+  background: var(--white-color);
   border-radius: 2px;
   transition: all 0.4s ease;
 }
@@ -7453,7 +7453,9 @@ margin-top: 20px;
    
     top: 19px;
     left: 6px;
-  background: black;
+  /* .close-btn itself is `background: white !important`, so these bars must
+     be the on-light token. White here makes the X invisible. */
+  background: var(--heading-color);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -7494,7 +7496,7 @@ margin-top: 20px;
 
 /* ===== CTA Section (Dark Theme with Cyan Glow) ===== */
 .cta-dark-section {
-  background: #0e0f10;
+  background: var(--primary-black-color);
   border-top: 1px solid #1f1f21;
   border-bottom: 1px solid #1f1f21;
   position: relative;
@@ -7670,7 +7672,7 @@ margin-top: 20px;
 
 
 .human-Agenko-iconic-box {
-  background-color: #000000; /* thoda dark shade of main color */
+  background-color: var(--gray-dark);
   border-radius: 15px;
   padding: 25px;
   position: relative;
@@ -7744,12 +7746,12 @@ margin-top: 20px;
 }
 
 .mi-mission-values-section {
-  background: #000;
+  background: var(--primary-black-color);
   color: #e2e8f0;
 }
 
 .mi-content-box {
-  background: #0e0f11;
+  background: var(--gray-dark);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
@@ -8171,3 +8173,17 @@ select:focus-visible {
   .qa-run__caret {
     animation: none; }
 }
+
+/*---------------------------------------
+    - Bootstrap surface utilities, re-pointed at the palette
+    .bg-black / .bg-dark ship with !important, so no :root change could
+    reach the page banners, the humans banner, the header or the
+    case-study cards -- they stayed literal black while everything around
+    them moved to navy. Used here as "dark section", so they map to the
+    palette's surfaces rather than to absolute black.
+-----------------------------------------*/
+.bg-black {
+  background-color: var(--primary-black-color) !important; }
+
+.bg-dark {
+  background-color: var(--gray-dark) !important; }
