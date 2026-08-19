@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -100,10 +101,20 @@ const HeroBanner2 = () => {
 
                         <div className="col-lg-8">
                             <div className="hero-image style-one pf_fadeup">
-                                <img
-                                    src="/assets/images/pages/new-images/startups.jpg"
-                                 alt=''
-                                    className=" rounded-3"
+                                {/* next/image so this gets resized and served as
+                                    webp/avif. The previous asset was a 6144x3456
+                                    9.9MB JPEG dropped into a ~850px slot through a
+                                    plain <img>, i.e. shipped at full size to every
+                                    visitor. priority because it is the LCP element. */}
+                                <Image
+                                    src="/assets/images/pages/new-images/Machine-Learning.jpeg"
+                                    alt="Abstract visualisation of data flowing through a validation pipeline"
+                                    width={1408}
+                                    height={768}
+                                    priority
+                                    sizes="(max-width: 991px) 100vw, 66vw"
+                                    className="rounded-3"
+                                    style={{ width: "100%", height: "auto" }}
                                 />
                             </div>
                         </div>
