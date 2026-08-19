@@ -8282,3 +8282,64 @@ select:focus-visible {
   .container::before {
   background-color: transparent !important;
   border-bottom: 0 !important; }
+
+/*---------------------------------------
+    - Testimonial stat panel
+    Stands in for the stock photo beside the testimonial slider. Same
+    construction as the hero test-run panel: no image request, sharp at
+    any density, and it carries the claim rather than decorating it.
+-----------------------------------------*/
+.qa-stats {
+  padding: 34px 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, #0e1a2c 0%, #0a1322 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4); }
+
+.qa-stats__eyebrow {
+  margin: 0 0 22px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-color); }
+
+.qa-stats__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.qa-stats__list li + li {
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border-color); }
+
+.qa-stats__value {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white-color); }
+
+/* The unit rides smaller and in the accent so the figure stays dominant. */
+.qa-stats__value em {
+  font-style: normal;
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-left: 2px; }
+
+.qa-stats__label {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-color); }
+
+@media screen and (max-width: 991px) {
+  .qa-stats {
+    padding: 28px 24px; }
+
+  .qa-stats__value {
+    font-size: 44px; }
+}

@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image';
 import React from 'react';
 import Slider from 'react-slick';
 
@@ -81,10 +80,28 @@ const Testimonial1 = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-4">
                             
-                            <div className="agk-image-box mb-50 pf_fadeup">
-                                <div className="agk-image">
-                                <Image src="/assets/images/pages/new-images/testimonial.jpg" alt="img" width={410} height={466}   style={{objectFit:"contain"  }} />
-                                </div>
+                            {/* Replaces a warm-lit stock photo of two people in
+                                suits, which fought the navy palette and said
+                                nothing about QA. Figures are the ones already
+                                published on the About page -- reused, not
+                                invented here. */}
+                            <div className="qa-stats mb-50 pf_fadeup">
+                                <p className="qa-stats__eyebrow">Proven in production</p>
+
+                                <ul className="qa-stats__list">
+                                    <li>
+                                        <span className="qa-stats__value">240<em>+</em></span>
+                                        <span className="qa-stats__label">Automated test suites delivered</span>
+                                    </li>
+                                    <li>
+                                        <span className="qa-stats__value">99<em>%</em></span>
+                                        <span className="qa-stats__label">Accuracy in AI-driven reports</span>
+                                    </li>
+                                    <li>
+                                        <span className="qa-stats__value">5<em>+</em></span>
+                                        <span className="qa-stats__label">Years in smart QA solutions</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div className="col-lg-8">
