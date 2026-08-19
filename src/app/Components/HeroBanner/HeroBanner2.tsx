@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -100,22 +99,65 @@ const HeroBanner2 = () => {
                         </div>
 
                         <div className="col-lg-8">
-                            <div className="hero-image style-one pf_fadeup">
-                                {/* next/image so this gets resized and served as
-                                    webp/avif. The previous asset was a 6144x3456
-                                    9.9MB JPEG dropped into a ~850px slot through a
-                                    plain <img>, i.e. shipped at full size to every
-                                    visitor. priority because it is the LCP element. */}
-                                <Image
-                                    src="/assets/images/pages/new-images/Machine-Learning.jpeg"
-                                    alt="Abstract visualisation of data flowing through a validation pipeline"
-                                    width={1408}
-                                    height={768}
-                                    priority
-                                    sizes="(max-width: 991px) 100vw, 66vw"
-                                    className="rounded-3"
-                                    style={{ width: "100%", height: "auto" }}
-                                />
+                            {/* Replaces the stock photo. Pure markup, so it costs
+                                no image download, stays sharp at any density, and
+                                shows what the company actually does. The run is
+                                illustrative -- generic spec names, no client data.
+                                role="img" + aria-label so assistive tech gets one
+                                sensible summary instead of terminal fragments. */}
+                            <div
+                                className="qa-run pf_fadeup"
+                                role="img"
+                                aria-label="Illustration of a Playwright test run finishing with all tests passing"
+                            >
+                                <div className="qa-run__bar">
+                                    <span className="qa-run__dot"></span>
+                                    <span className="qa-run__dot"></span>
+                                    <span className="qa-run__dot"></span>
+                                    <span className="qa-run__file">evalon-qa — playwright</span>
+                                </div>
+
+                                <div className="qa-run__body" aria-hidden="true">
+                                    <p className="qa-run__cmd">
+                                        <span className="qa-run__prompt">$</span> npx playwright test
+                                    </p>
+
+                                    <ul className="qa-run__list">
+                                        <li style={{ animationDelay: "0.15s" }}>
+                                            <span className="qa-run__tick">✓</span>
+                                            <span className="qa-run__spec">auth.spec.ts</span>
+                                            <span className="qa-run__case">signs in with valid credentials</span>
+                                            <span className="qa-run__ms">1.2s</span>
+                                        </li>
+                                        <li style={{ animationDelay: "0.5s" }}>
+                                            <span className="qa-run__tick">✓</span>
+                                            <span className="qa-run__spec">checkout.spec.ts</span>
+                                            <span className="qa-run__case">applies a discount code</span>
+                                            <span className="qa-run__ms">0.9s</span>
+                                        </li>
+                                        <li style={{ animationDelay: "0.85s" }}>
+                                            <span className="qa-run__tick">✓</span>
+                                            <span className="qa-run__spec">search.spec.ts</span>
+                                            <span className="qa-run__case">returns ranked results</span>
+                                            <span className="qa-run__ms">1.4s</span>
+                                        </li>
+                                        <li style={{ animationDelay: "1.2s" }}>
+                                            <span className="qa-run__tick">✓</span>
+                                            <span className="qa-run__spec">a11y.spec.ts</span>
+                                            <span className="qa-run__case">no critical violations</span>
+                                            <span className="qa-run__ms">2.1s</span>
+                                        </li>
+                                    </ul>
+
+                                    <p className="qa-run__summary" style={{ animationDelay: "1.55s" }}>
+                                        <span className="qa-run__pass">48 passed</span>
+                                        <span className="qa-run__sep">·</span>
+                                        <span>0 failed</span>
+                                        <span className="qa-run__sep">·</span>
+                                        <span>12.4s</span>
+                                        <span className="qa-run__caret"></span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
