@@ -254,6 +254,13 @@ export default function Nav({ setMobileToggle }) {
         )}
       </DropDown>
 
+      <li>
+        <Link href="/humans" onClick={() => setMobileToggle(false)}
+          className={isActive("/humans") ? "is-active" : ""}>
+          Humans
+        </Link>
+      </li>
+
       {/* <li>
         <Link href="/case-studies" onClick={() => setMobileToggle(false)}>
           Case Studies
