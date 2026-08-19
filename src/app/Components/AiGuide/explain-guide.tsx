@@ -5,7 +5,7 @@ import React from "react";
 
 export default function ExplainGuide(data) {
   return (
-    <section className="AIexplain-section pt-100 pb-100" style={{ backgroundColor: "#0a0a0a" }}>
+    <section className="AIexplain-section pt-100 pb-100" style={{ backgroundColor: "var(--primary-black-color)" }}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-7">
@@ -28,8 +28,8 @@ export default function ExplainGuide(data) {
               <div
                 className="AIcard p-4 h-100 rounded shadow-sm text-white"
                 style={{
-                  backgroundColor: "#1a1a1a",
-                  border: "1px solid #2c2c2c"
+                  backgroundColor: "var(--gray-dark)",
+                  border: "1px solid var(--border-color)"
                 }}
               >
                 <div className="text-center mb-3">

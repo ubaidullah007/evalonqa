@@ -4,7 +4,7 @@ const StartBalancingAct = (data : any) => {
 
 
     return (
-        <section className="agk-service-ca pt-80 text-md-start text-center" style={{ backgroundColor: "#18191b" }}>
+        <section className="agk-service-ca pt-80 text-md-start text-center" style={{ backgroundColor: "var(--gray-dark)" }}>
             <div className="container">
                 {/* Header Section */}
                 <div className="row align-items-end">

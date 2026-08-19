@@ -51,7 +51,7 @@ const features = [
 
 export default function HomeServices() {
   return (
-    <section className="py-5" style={{ backgroundColor: "#0a0a0a" }}>
+    <section className="py-5" style={{ backgroundColor: "var(--primary-black-color)" }}>
       
       <div className="container">
              <div className="row align-items-center">
@@ -76,8 +76,8 @@ export default function HomeServices() {
               <div
                 className="p-4 h-100 rounded shadow-sm text-center text-md-start"
                 style={{
-                  backgroundColor: "#1a1a1a",
-                  border: "1px solid #2c2c2c"
+                  backgroundColor: "var(--gray-dark)",
+                  border: "1px solid var(--border-color)"
                 }}
               >
                 <div className=" mb-3 m-auto m-md-0">
@@ -86,8 +86,8 @@ export default function HomeServices() {
                     style={{
                       width: "50px",
                       height: "50px",
-                      backgroundColor: "#ffffffff",
-                      border: "1px solid #333"
+                      backgroundColor: "var(--white-color)",
+                      border: "1px solid var(--border-color)"
                     }}
                   >
                     <Image

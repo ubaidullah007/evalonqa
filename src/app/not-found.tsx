@@ -8,7 +8,7 @@ export default function NotFound() {
     <Header1/>
     <div 
       className="d-flex align-items-center justify-content-center text-center" 
-      style={{ minHeight: "80vh", backgroundColor: "black" }}
+      style={{ minHeight: "80vh", backgroundColor: "var(--primary-black-color)" }}
     >
       <div className="container">
         <div className="row justify-content-center">
