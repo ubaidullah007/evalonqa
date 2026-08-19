@@ -31,7 +31,7 @@ export default function Header1({ variant }: any) {
   return (
     <div>
       <header
-        className={`bg-black cs-gescout_show cs_site_header header_style_2 cs_style_1 header_sticky_style1 ${
+        className={`cs-gescout_show cs_site_header header_style_2 cs_style_1 header_sticky_style1 ${
           variant ? variant : ""
         } cs_sticky_header cs_site_header_full_width ${
           mobileToggle ? "cs_mobile_toggle_active" : ""

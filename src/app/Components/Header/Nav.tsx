@@ -1,20 +1,27 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import DropDown from "./DropDown";
 import useCheckMobileScreen from "../hook/use-check-mobile-screen";
 
 export default function Nav({ setMobileToggle }) {
   const isItMobile = useCheckMobileScreen();
+  const pathname = usePathname();
+  // Exact match for "/" so it is not active on every page.
+  const isActive = (href) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <ul className="cs_nav_list fw-medium">
       <li>
-        <Link href="/" onClick={() => setMobileToggle(false)}>
+        <Link href="/" onClick={() => setMobileToggle(false)}
+          className={isActive("/") ? "is-active" : ""}>
           Home
         </Link>
       </li>
 
       <li>
-        <Link href="/about-us" onClick={() => setMobileToggle(false)}>
+        <Link href="/about-us" onClick={() => setMobileToggle(false)}
+          className={isActive("/about-us") ? "is-active" : ""}>
           About Us
         </Link>
       </li>
