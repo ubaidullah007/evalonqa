@@ -80,8 +80,8 @@ export default function Header1({ variant }: any) {
                   <div className="main-button">
                     <Link href="/contact" className="theme-btn style-one">
                       <span className="text-flip">
-                        <span className="text">Schedule a Consultation</span>
-                        <span className="text">Schedule a Consultation</span>
+                        <span className="text">Contact Us</span>
+                        <span className="text">Contact Us</span>
                       </span>
                     </Link>
                   </div>
@@ -114,8 +114,8 @@ export default function Header1({ variant }: any) {
           <div className="main-button mt-4">
             <Link href="/contact" className="theme-btn style-one">
               <span className="text-flip">
-                <span className="text">Schedule a Consultation</span>
-                <span className="text">Schedule a Consultation</span>
+                <span className="text">Contact Us</span>
+                <span className="text">Contact Us</span>
               </span>
             </Link>
           </div>

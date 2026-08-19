@@ -253,11 +253,6 @@ export default function Nav({ setMobileToggle }) {
         </Link>
       </li> */}
 
-      <li>
-        <Link href="/humans" onClick={() => setMobileToggle(false)}>
-          Humans
-        </Link>
-      </li>
     </ul>
   );
 }
