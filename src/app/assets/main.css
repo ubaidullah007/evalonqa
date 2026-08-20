@@ -8122,21 +8122,6 @@ select:focus-visible {
   -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
   mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%); }
 
-/* A test sweep: one bright line crossing the grid on a long cycle. */
-.hero-aurora__sweep {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 42%;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(56, 189, 248, 0.10) 45%,
-    rgba(125, 211, 252, 0.28) 50%,
-    rgba(56, 189, 248, 0.10) 55%,
-    transparent 100%);
-  animation: hero-sweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  will-change: transform; }
-
 /* Keeps the headline legible over whatever the blobs are doing, and
    fades the whole thing into the section below. */
 .hero-aurora__scrim {
@@ -8202,12 +8187,6 @@ select:focus-visible {
   to { transform: translate3d(8%, -18%, 0) scale(1.22); }
 }
 
-@keyframes hero-sweep {
-  0%   { transform: translateX(-120%); }
-  60%  { transform: translateX(280%); }
-  100% { transform: translateX(280%); }
-}
-
 @media screen and (max-width: 991px) {
   .hero-wrapper-two.has-backdrop {
     padding-top: 140px; }
@@ -8219,12 +8198,8 @@ select:focus-visible {
 /* Motion here is decorative, so it all stops. The colour fields stay --
    they are what the section looks like, not an effect. */
 @media (prefers-reduced-motion: reduce) {
-  .hero-aurora__blob,
-  .hero-aurora__sweep {
+  .hero-aurora__blob {
     animation: none; }
-
-  .hero-aurora__sweep {
-    opacity: 0; }
 
   /* The listener bails out under reduced motion too, so this is belt and
      braces for anyone toggling the setting after load. */
@@ -8539,4 +8514,75 @@ select:focus-visible {
 
   .qa-stats__value {
     font-size: 44px; }
+}
+
+/*---------------------------------------
+    - Scroll to top
+    Sits above the WhatsApp button rather than beside it, so neither
+    covers the other on a narrow screen. The ring doubles as a read
+    position indicator, driven by --scroll-progress (0 to 1).
+-----------------------------------------*/
+.scroll-top {
+  position: fixed;
+  right: 29px;
+  bottom: 112px;
+  z-index: 9998;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--white-color);
+  background-color: rgba(17, 28, 47, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s,
+    color 0.25s ease; }
+
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none; }
+
+.scroll-top:hover {
+  color: var(--primary-color); }
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px; }
+
+/* Progress ring. conic-gradient sweeps to --scroll-progress, and the mask
+   punches out the middle so only a 2px ring shows. */
+.scroll-top__ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: conic-gradient(
+    var(--primary-color) calc(var(--scroll-progress, 0) * 360deg),
+    rgba(56, 189, 248, 0.16) 0deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px)); }
+
+.scroll-top__icon {
+  position: relative; }
+
+@media screen and (max-width: 575px) {
+  .scroll-top {
+    right: 24px;
+    bottom: 98px;
+    width: 42px;
+    height: 42px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transition: opacity 0.2s ease, visibility 0.2s; }
 }

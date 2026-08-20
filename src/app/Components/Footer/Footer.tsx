@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CopyrightYear from "./CopyrightYear";
 
 const Footer = () => {
   return (
@@ -146,7 +147,8 @@ const Footer = () => {
             <div className="col-md-6">
               <div className="copyright-text">
                 <p>
-                  &copy; 2025 <span><Link href='/'>Evalon QA</Link></span> - All Rights Reserved.
+                  &copy; <CopyrightYear buildYear={new Date().getFullYear()} />{" "}
+                  <span><Link href='/'>Evalon QA</Link></span> - All Rights Reserved.
                 </p>
               </div>
             </div>

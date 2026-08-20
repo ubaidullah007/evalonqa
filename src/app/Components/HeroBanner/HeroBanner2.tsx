@@ -58,7 +58,6 @@ const HeroBanner2 = () => {
                     <span className="hero-aurora__blob hero-aurora__blob--b"></span>
                     <span className="hero-aurora__blob hero-aurora__blob--c"></span>
                     <span className="hero-aurora__grid"></span>
-                    <span className="hero-aurora__sweep"></span>
                     <span className="hero-aurora__scrim"></span>
                     <span className="hero-aurora__torch"></span>
                 </div>

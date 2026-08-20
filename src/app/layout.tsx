@@ -4,6 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "./assets/main.css";
 import WhatsApp from "./Components/whatsapp";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({ children } : any ) {
         {children}
      
      <WhatsApp />
+        <ScrollToTop />
       </body>
     </html>
   );
