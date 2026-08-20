@@ -1,10 +1,54 @@
+"use client";
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const HeroBanner2 = () => {
+    const wrapRef = useRef(null);
+
+    useEffect(() => {
+        const el = wrapRef.current;
+        if (!el) return;
+
+        // Pointer-driven light only makes sense where there is a pointer.
+        // Touch devices would get a torch stuck wherever the last tap landed.
+        if (window.matchMedia("(hover: none)").matches) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        let frame = 0;
+        let x = 0;
+        let y = 0;
+
+        // mousemove fires far faster than the screen repaints, so the write
+        // is coalesced into one rAF -- otherwise this thrashes style recalc.
+        const onMove = (e) => {
+            const rect = el.getBoundingClientRect();
+            x = e.clientX - rect.left;
+            y = e.clientY - rect.top;
+            if (frame) return;
+            frame = requestAnimationFrame(() => {
+                el.style.setProperty("--torch-x", x + "px");
+                el.style.setProperty("--torch-y", y + "px");
+                frame = 0;
+            });
+        };
+        const onEnter = () => el.classList.add("is-lit");
+        const onLeave = () => el.classList.remove("is-lit");
+
+        el.addEventListener("mousemove", onMove);
+        el.addEventListener("mouseenter", onEnter);
+        el.addEventListener("mouseleave", onLeave);
+
+        return () => {
+            el.removeEventListener("mousemove", onMove);
+            el.removeEventListener("mouseenter", onEnter);
+            el.removeEventListener("mouseleave", onLeave);
+            if (frame) cancelAnimationFrame(frame);
+        };
+    }, []);
+
     return (
         <section className="agk-hero">
-            <div className="hero-wrapper-two has-backdrop">
+            <div className="hero-wrapper-two has-backdrop" ref={wrapRef}>
                 {/* Animated backdrop, all CSS. Replaces the 2.8MB clip, which
                     had "Hey there" burned into the footage and needed heavy
                     blurring to be usable. Nothing here is downloaded, and it
@@ -16,6 +60,7 @@ const HeroBanner2 = () => {
                     <span className="hero-aurora__grid"></span>
                     <span className="hero-aurora__sweep"></span>
                     <span className="hero-aurora__scrim"></span>
+                    <span className="hero-aurora__torch"></span>
                 </div>
 
                 <div className="shape circle-one"><span></span></div>

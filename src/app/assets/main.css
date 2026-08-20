@@ -8152,6 +8152,40 @@ select:focus-visible {
       transparent 30%,
       var(--primary-black-color) 100%); }
 
+/* Cursor torch. The JS only writes --torch-x / --torch-y; everything the
+   eye sees is this gradient following those two values, so the work per
+   mousemove is one custom-property write, coalesced into a rAF. */
+.hero-aurora__torch {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    340px circle at var(--torch-x, 50%) var(--torch-y, 40%),
+    rgba(125, 211, 252, 0.30) 0%,
+    rgba(56, 189, 248, 0.14) 38%,
+    rgba(56, 189, 248, 0.04) 58%,
+    transparent 72%); }
+
+.hero-wrapper-two.has-backdrop.is-lit .hero-aurora__torch {
+  opacity: 1;
+  animation: hero-torch-pulse 2.6s ease-in-out infinite; }
+
+/* Brighten the grid under the light so the beam looks like it is falling
+   on something rather than floating in front of it. */
+.hero-wrapper-two.has-backdrop.is-lit .hero-aurora__grid {
+  -webkit-mask-image:
+    radial-gradient(300px circle at var(--torch-x, 50%) var(--torch-y, 40%), #000 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
+  mask-image:
+    radial-gradient(300px circle at var(--torch-x, 50%) var(--torch-y, 40%), #000 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%); }
+
+@keyframes hero-torch-pulse {
+  0%, 100% { opacity: 0.82; }
+  50%      { opacity: 1; }
+}
+
 .hero-wrapper-two.has-backdrop > .container {
   position: relative;
   z-index: 2; }
@@ -8191,6 +8225,11 @@ select:focus-visible {
 
   .hero-aurora__sweep {
     opacity: 0; }
+
+  /* The listener bails out under reduced motion too, so this is belt and
+     braces for anyone toggling the setting after load. */
+  .hero-aurora__torch {
+    display: none; }
 }
 
 /*---------------------------------------
