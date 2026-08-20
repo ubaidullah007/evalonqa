@@ -4,22 +4,19 @@ import React from 'react';
 const HeroBanner2 = () => {
     return (
         <section className="agk-hero">
-            <div className="hero-wrapper-two has-video">
-                {/* Full-bleed background video. The site header is
-                    position:absolute over the page, so the clip runs edge to
-                    edge behind both the header and the hero copy. */}
-                <video
-                    className="hero-video"
-                    src="/bg-video.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    aria-hidden="true"
-                    tabIndex={-1}
-                ></video>
-                <span className="hero-video__scrim" aria-hidden="true"></span>
+            <div className="hero-wrapper-two has-backdrop">
+                {/* Animated backdrop, all CSS. Replaces the 2.8MB clip, which
+                    had "Hey there" burned into the footage and needed heavy
+                    blurring to be usable. Nothing here is downloaded, and it
+                    stays sharp at any density. */}
+                <div className="hero-aurora" aria-hidden="true">
+                    <span className="hero-aurora__blob hero-aurora__blob--a"></span>
+                    <span className="hero-aurora__blob hero-aurora__blob--b"></span>
+                    <span className="hero-aurora__blob hero-aurora__blob--c"></span>
+                    <span className="hero-aurora__grid"></span>
+                    <span className="hero-aurora__sweep"></span>
+                    <span className="hero-aurora__scrim"></span>
+                </div>
 
                 <div className="shape circle-one"><span></span></div>
                 <div className="shape circle-two"><span></span></div>
