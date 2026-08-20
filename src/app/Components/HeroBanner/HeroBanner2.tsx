@@ -91,7 +91,7 @@ const HeroBanner2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row align-items-center">
                         <div className="col-lg-4">
                             <ul className="service-list pf_fadeup">
                                 <li>
